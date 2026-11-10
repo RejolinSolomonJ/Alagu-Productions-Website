@@ -17,7 +17,7 @@ export default function HomePage() {
       <CinematicHero />
 
       {/* Credibility Stats Strip */}
-      <section className="py-16 sm:py-20 bg-cinema-950 border-b border-white/10">
+      <section className="py-12 bg-cinema-900 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <CredibilityStats />
         </div>

@@ -75,15 +75,28 @@ export function writeCMS(data: CMSDatabase): void {
 
 // Helper methods
 export function getMovies(): Movie[] {
-  return readCMS().movies.filter((m) => m.published);
+  return readCMS().movies
+    .filter((m) => m.published)
+    .map((m) => ({
+      ...m,
+      posterUrl: m.posterUrl || `/posters/${m.slug}.jpg`,
+    }));
 }
 
 export function getAllMoviesAdmin(): Movie[] {
-  return readCMS().movies;
+  return readCMS().movies.map((m) => ({
+    ...m,
+    posterUrl: m.posterUrl || `/posters/${m.slug}.jpg`,
+  }));
 }
 
 export function getMovieBySlug(slug: string): Movie | undefined {
-  return readCMS().movies.find((m) => m.slug === slug);
+  const movie = readCMS().movies.find((m) => m.slug === slug);
+  if (!movie) return undefined;
+  return {
+    ...movie,
+    posterUrl: movie.posterUrl || `/posters/${movie.slug}.jpg`,
+  };
 }
 
 export function getProjects(): ExhibitionProject[] {

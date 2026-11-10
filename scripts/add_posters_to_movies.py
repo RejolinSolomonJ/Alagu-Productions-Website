@@ -15,3 +15,4 @@ with open(path, 'w', encoding='utf-8') as f:
     f.write(new_content)
 
 print("Updated movies.ts with posterUrl for all movies.")
+

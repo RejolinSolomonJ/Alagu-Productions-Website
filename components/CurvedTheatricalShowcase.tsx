@@ -154,6 +154,8 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
             const scale = 1 - Math.abs(offset) * 0.055; // center is most prominent
             const opacity = 1 - Math.abs(offset) * 0.16; // soft depth fade on extreme wings
 
+            const posterSrc = movie.posterUrl || `/posters/${movie.slug}.jpg`;
+
             return (
               <div
                 key={`${movie.id}-${offset}`}
@@ -161,97 +163,79 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
                 style={{
                   transform: `translateX(${transX}px) translateY(${transY}px) translateZ(${transZ}px) rotateY(${rotY}deg) scale(${scale})`,
                   zIndex: 20 - Math.abs(offset),
-                  opacity: Math.max(0.25, opacity),
+                  opacity: Math.max(0.35, opacity),
                 }}
-                className={`absolute w-[210px] sm:w-[260px] md:w-[300px] aspect-[2/3] rounded-2xl cursor-pointer transition-all duration-500 ease-out select-none group ${
-                  isCenter
-                    ? 'ring-2 ring-gold shadow-[0_20px_50px_rgba(0,0,0,0.85),0_0_30px_rgba(200,157,60,0.25)]'
+                className={`absolute w-[210px] sm:w-[260px] md:w-[300px] aspect-[2/3] rounded-2xl cursor-pointer transition-all duration-500 ease-out select-none group ${isCenter
+                    ? 'ring-2 ring-gold/90 shadow-[0_20px_60px_rgba(0,0,0,0.9),0_0_35px_rgba(200,157,60,0.35)] scale-100'
                     : 'shadow-[0_15px_35px_rgba(0,0,0,0.7)] hover:opacity-100 hover:scale-[1.02]'
-                }`}
+                  }`}
               >
                 {/* Movie Card Poster Presentation */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-cinema-950 border border-white/15 flex flex-col justify-between p-4 sm:p-5 shadow-2xl">
+                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-cinema-950 border border-white/20 flex flex-col justify-between shadow-2xl">
                   {/* Thematic Movie Poster Background */}
-                  {movie.posterUrl ? (
-                    <Image
-                      src={movie.posterUrl}
-                      alt={movie.title}
-                      fill
-                      className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
-                      sizes="(max-width: 640px) 210px, (max-width: 768px) 260px, 300px"
-                      priority={Math.abs(offset) <= 1}
-                    />
-                  ) : (
-                    <div
-                      className={`absolute inset-0 bg-gradient-to-br ${movie.bannerGradient} transition-transform duration-700 group-hover:scale-105`}
-                    />
-                  )}
+                  <Image
+                    src={posterSrc}
+                    alt={movie.title}
+                    fill
+                    className="object-cover object-center transition-transform duration-700 group-hover:scale-105"
+                    sizes="(max-width: 640px) 210px, (max-width: 768px) 260px, 300px"
+                    priority={Math.abs(offset) <= 1}
+                  />
 
-                  {/* Matte Vignette & Cinematic Shadow Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/40 to-black/60 pointer-events-none" />
-                  <div className="absolute inset-0 bg-black/20 pointer-events-none" />
+                  {/* Top Subtle Scrim for Badge Readability */}
+                  <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-black/80 via-black/30 to-transparent pointer-events-none" />
+
+                  {/* Bottom Vignette for Caption */}
+                  <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black via-black/75 to-transparent pointer-events-none" />
 
                   {/* Top Bar: Status Badge + Year */}
-                  <div className="relative z-10 flex items-center justify-between text-[11px] font-sans">
+                  <div className="relative z-10 p-3 sm:p-4 flex items-center justify-between text-[11px] font-sans">
                     <span
-                      className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider backdrop-blur-md border ${
-                        movie.status === 'Now Showing'
-                          ? 'bg-emerald-500/30 text-emerald-300 border-emerald-400/50 shadow-[0_0_12px_rgba(16,185,129,0.3)]'
-                          : 'bg-gold/30 text-gold-light border-gold/50 shadow-[0_0_12px_rgba(200,157,60,0.3)]'
-                      }`}
+                      className={`px-2.5 py-0.5 rounded-full text-[10px] font-semibold uppercase tracking-wider backdrop-blur-md border ${movie.status === 'Now Showing'
+                          ? 'bg-emerald-500/35 text-emerald-300 border-emerald-400/60 shadow-[0_0_12px_rgba(16,185,129,0.35)]'
+                          : 'bg-gold/35 text-gold-light border-gold/60 shadow-[0_0_12px_rgba(200,157,60,0.35)]'
+                        }`}
                     >
                       {movie.status}
                     </span>
 
-                    <span className="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-cinema-300 border border-white/20 font-mono text-[10px]">
+                    <span className="px-2.5 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-cinema-300 border border-white/20 font-mono text-[10px]">
                       {movie.releaseYear}
                     </span>
                   </div>
 
-                  {/* Center Theatrical Artwork / Monogram */}
-                  <div className="relative z-10 my-auto text-center py-2 flex flex-col items-center justify-center">
-                    <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-black/60 backdrop-blur-md border border-white/20 flex items-center justify-center text-gold mb-2.5 group-hover:scale-110 group-hover:border-gold transition-all duration-300 shadow-lg">
-                      <Film className="w-5 h-5" />
-                    </div>
-
-                    <h3 className="font-serif text-lg sm:text-2xl font-bold text-white tracking-tight leading-tight px-2 group-hover:text-gold-light transition-colors line-clamp-2 drop-shadow-md">
-                      {movie.title}
-                    </h3>
-
-                    {movie.director && (
-                      <p className="text-[11px] text-cinema-200 mt-1 font-medium font-sans drop-shadow">
-                        Dir. {movie.director}
-                      </p>
-                    )}
-
-                    {/* Language Pills */}
-                    <div className="flex flex-wrap gap-1 justify-center mt-2.5">
+                  {/* Bottom Card Footer: Movie Title, Territory & Slate Link */}
+                  <div className="relative z-10 p-4 sm:p-5 pt-0 space-y-2">
+                    <div className="flex items-center gap-1.5 flex-wrap">
                       {movie.languages.slice(0, 3).map((lang) => (
                         <span
                           key={lang}
-                          className="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-cinema-200 text-[10px] border border-white/15 font-sans"
+                          className="px-2 py-0.5 rounded-full bg-black/70 backdrop-blur-md text-cinema-200 text-[10px] border border-white/20 font-sans"
                         >
                           {lang}
                         </span>
                       ))}
                     </div>
-                  </div>
 
-                  {/* Bottom Bar: Territories & Action */}
-                  <div className="relative z-10 pt-3 border-t border-white/15 flex items-center justify-between text-xs backdrop-blur-sm -mx-2 -mb-2 px-3 py-2 rounded-b-xl bg-black/40">
-                    <span className="text-[11px] text-cinema-300 flex items-center gap-1 truncate max-w-[140px]">
-                      <Globe2 className="w-3.5 h-3.5 text-gold flex-shrink-0" />
-                      <span className="truncate">{movie.territories[0] || 'Europe'}</span>
-                    </span>
+                    <h3 className="font-serif text-lg sm:text-xl font-bold text-white tracking-tight leading-tight group-hover:text-gold-light transition-colors drop-shadow-md">
+                      {movie.title}
+                    </h3>
 
-                    <Link
-                      href={`/movies/${movie.slug}`}
-                      className="inline-flex items-center gap-1 font-semibold text-gold hover:text-gold-light transition-colors text-xs px-2.5 py-1 rounded bg-white/10 hover:bg-gold/20 border border-gold/30"
-                      onClick={(e) => e.stopPropagation()}
-                    >
-                      <span>Slate</span>
-                      <ArrowRight className="w-3 h-3" />
-                    </Link>
+                    <div className="pt-2 border-t border-white/15 flex items-center justify-between text-xs">
+                      <span className="text-[11px] text-cinema-300 flex items-center gap-1 truncate max-w-[140px]">
+                        <Globe2 className="w-3.5 h-3.5 text-gold flex-shrink-0" />
+                        <span className="truncate">{movie.territories[0] || 'Europe'}</span>
+                      </span>
+
+                      <Link
+                        href={`/movies/${movie.slug}`}
+                        className="inline-flex items-center gap-1 font-semibold text-gold hover:text-gold-light transition-colors text-xs px-2.5 py-1 rounded-md bg-black/60 hover:bg-gold/20 border border-gold/40 backdrop-blur-md"
+                        onClick={(e) => e.stopPropagation()}
+                      >
+                        <span>Slate</span>
+                        <ArrowRight className="w-3 h-3" />
+                      </Link>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -296,9 +280,8 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
             <button
               key={m.id}
               onClick={() => setActiveIndex(idx)}
-              className={`transition-all duration-300 rounded-full h-1.5 ${
-                idx === activeIndex ? 'w-7 bg-gold' : 'w-1.5 bg-white/20 hover:bg-white/40'
-              }`}
+              className={`transition-all duration-300 rounded-full h-1.5 ${idx === activeIndex ? 'w-7 bg-gold' : 'w-1.5 bg-white/20 hover:bg-white/40'
+                }`}
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}

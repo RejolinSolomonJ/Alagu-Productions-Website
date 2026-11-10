@@ -34,7 +34,8 @@
       "accentColor": "#D4AF37",
       "featured": true,
       "published": true,
-      "kdmFormat": "DCI 4K Scope • Dolby Atmos 7.1 • 5.1 Uncompressed"
+      "kdmFormat": "DCI 4K Scope \u2022 Dolby Atmos 7.1 \u2022 5.1 Uncompressed",
+      "posterUrl": "/posters/jailer-2.jpg"
     },
     {
       "id": "m-2",
@@ -70,7 +71,8 @@
       "accentColor": "#E63946",
       "featured": true,
       "published": true,
-      "kdmFormat": "DCI 4K Flat/Scope • Dolby Atmos 64-Channel"
+      "kdmFormat": "DCI 4K Flat/Scope \u2022 Dolby Atmos 64-Channel",
+      "posterUrl": "/posters/thug-life.jpg"
     },
     {
       "id": "m-3",
@@ -104,7 +106,8 @@
       "accentColor": "#F4C743",
       "featured": true,
       "published": true,
-      "kdmFormat": "DCI 2K/4K • Dolby 5.1 / 7.1 Surround"
+      "kdmFormat": "DCI 2K/4K \u2022 Dolby 5.1 / 7.1 Surround",
+      "posterUrl": "/posters/good-bad-ugly.jpg"
     },
     {
       "id": "m-4",
@@ -138,7 +141,8 @@
       "accentColor": "#C084FC",
       "featured": true,
       "published": true,
-      "kdmFormat": "DCI 4K Scope • Dolby Atmos"
+      "kdmFormat": "DCI 4K Scope \u2022 Dolby Atmos",
+      "posterUrl": "/posters/the-rajasaab.jpg"
     },
     {
       "id": "m-5",
@@ -167,7 +171,8 @@
       "accentColor": "#F97316",
       "featured": true,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1 Theatrical Audio"
+      "kdmFormat": "DCI 2K \u2022 5.1 Theatrical Audio",
+      "posterUrl": "/posters/peddi.jpg"
     },
     {
       "id": "m-6",
@@ -194,7 +199,8 @@
       "accentColor": "#A1A1AA",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K Scope • 5.1 Surround"
+      "kdmFormat": "DCI 2K Scope \u2022 5.1 Surround",
+      "posterUrl": "/posters/karuppu.jpg"
     },
     {
       "id": "m-7",
@@ -221,7 +227,8 @@
       "accentColor": "#10B981",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 4K • Dolby Atmos"
+      "kdmFormat": "DCI 4K \u2022 Dolby Atmos",
+      "posterUrl": "/posters/patriot.jpg"
     },
     {
       "id": "m-8",
@@ -248,7 +255,8 @@
       "accentColor": "#06B6D4",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 4K Scope • Dolby Atmos"
+      "kdmFormat": "DCI 4K Scope \u2022 Dolby Atmos",
+      "posterUrl": "/posters/dhurandhar.jpg"
     },
     {
       "id": "m-9",
@@ -277,7 +285,8 @@
       "accentColor": "#F59E0B",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K/4K • Dolby 7.1"
+      "kdmFormat": "DCI 2K/4K \u2022 Dolby 7.1",
+      "posterUrl": "/posters/jana-nayagan.jpg"
     },
     {
       "id": "m-10",
@@ -306,7 +315,8 @@
       "accentColor": "#38BDF8",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • Uncompressed 5.1"
+      "kdmFormat": "DCI 2K \u2022 Uncompressed 5.1",
+      "posterUrl": "/posters/eko.jpg"
     },
     {
       "id": "m-11",
@@ -335,7 +345,8 @@
       "accentColor": "#14B8A6",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1 Surround"
+      "kdmFormat": "DCI 2K \u2022 5.1 Surround",
+      "posterUrl": "/posters/tourist-family.jpg"
     },
     {
       "id": "m-12",
@@ -362,7 +373,8 @@
       "accentColor": "#F43F5E",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1 Dolby"
+      "kdmFormat": "DCI 2K \u2022 5.1 Dolby",
+      "posterUrl": "/posters/hit.jpg"
     },
     {
       "id": "m-13",
@@ -389,7 +401,8 @@
       "accentColor": "#84CC16",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1"
+      "kdmFormat": "DCI 2K \u2022 5.1",
+      "posterUrl": "/posters/gymkhana.jpg"
     },
     {
       "id": "m-14",
@@ -417,7 +430,8 @@
       "accentColor": "#8B5CF6",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K Scope • 5.1"
+      "kdmFormat": "DCI 2K Scope \u2022 5.1",
+      "posterUrl": "/posters/kalamkaval.jpg"
     },
     {
       "id": "m-15",
@@ -443,7 +457,8 @@
       "accentColor": "#3B82F6",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1"
+      "kdmFormat": "DCI 2K \u2022 5.1",
+      "posterUrl": "/posters/ustaad.jpg"
     },
     {
       "id": "m-16",
@@ -470,7 +485,8 @@
       "accentColor": "#D97706",
       "featured": false,
       "published": true,
-      "kdmFormat": "DCI 2K • 5.1 Surround"
+      "kdmFormat": "DCI 2K \u2022 5.1 Surround",
+      "posterUrl": "/posters/aram.jpg"
     }
   ],
   "projects": [

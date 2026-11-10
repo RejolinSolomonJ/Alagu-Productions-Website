@@ -1,0 +1,694 @@
+{
+  "movies": [
+    {
+      "id": "m-1",
+      "slug": "jailer-2",
+      "title": "Jailer 2",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Expected Q4 2025 / 2026",
+      "languages": [
+        "Tamil",
+        "Telugu",
+        "Hindi"
+      ],
+      "genres": [
+        "Action",
+        "Thriller",
+        "Drama"
+      ],
+      "territories": [
+        "United Kingdom",
+        "France",
+        "Germany",
+        "Nordics",
+        "Benelux",
+        "Switzerland"
+      ],
+      "synopsis": "The monumental return of \"Tiger\" Muthuvel Pandian. A high-stakes international action spectacle uniting powerhouse performers across Indian cinema, set against sprawling international landscapes.",
+      "director": "Nelson Dilipkumar",
+      "cast": [
+        "Rajinikanth"
+      ],
+      "bannerGradient": "from-amber-950 via-zinc-950 to-neutral-950",
+      "accentColor": "#D4AF37",
+      "featured": true,
+      "published": true,
+      "kdmFormat": "DCI 4K Scope • Dolby Atmos 7.1 • 5.1 Uncompressed"
+    },
+    {
+      "id": "m-2",
+      "slug": "thug-life",
+      "title": "Thug Life",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Expected Mid 2025",
+      "languages": [
+        "Tamil",
+        "Telugu",
+        "Malayalam",
+        "Hindi"
+      ],
+      "genres": [
+        "Gangster Epic",
+        "Action Drama"
+      ],
+      "territories": [
+        "All European Territories",
+        "Georgia",
+        "UK & Ireland"
+      ],
+      "synopsis": "The legendary creative reunion of Mani Ratnam and Kamal Haasan after three decades. A gripping gangster saga tracing underworld allegiance, brotherhood, and raw power.",
+      "director": "Mani Ratnam",
+      "cast": [
+        "Kamal Haasan",
+        "Silambarasan TR",
+        "Trisha Krishnan",
+        "Pankaj Tripathi"
+      ],
+      "bannerGradient": "from-red-950 via-neutral-950 to-zinc-950",
+      "accentColor": "#E63946",
+      "featured": true,
+      "published": true,
+      "kdmFormat": "DCI 4K Flat/Scope • Dolby Atmos 64-Channel"
+    },
+    {
+      "id": "m-3",
+      "slug": "good-bad-ugly",
+      "title": "Good Bad Ugly",
+      "status": "Now Showing",
+      "releaseYear": 2025,
+      "releaseDate": "Worldwide Theatrical Release",
+      "languages": [
+        "Tamil",
+        "Telugu"
+      ],
+      "genres": [
+        "High-Octane Action",
+        "Thriller"
+      ],
+      "territories": [
+        "United Kingdom",
+        "Germany",
+        "France",
+        "Norway",
+        "Sweden"
+      ],
+      "synopsis": "An electrifying multi-layered thriller driven by high-speed heists, unexpected betrayals, and adrenaline-pumping sequences designed specifically for IMAX and premium large formats.",
+      "director": "Adhik Ravichandran",
+      "cast": [
+        "Ajith Kumar",
+        "Trisha Krishnan"
+      ],
+      "bannerGradient": "from-yellow-950 via-stone-950 to-zinc-950",
+      "accentColor": "#F4C743",
+      "featured": true,
+      "published": true,
+      "kdmFormat": "DCI 2K/4K • Dolby 5.1 / 7.1 Surround"
+    },
+    {
+      "id": "m-4",
+      "slug": "the-rajasaab",
+      "title": "The RajaSaab",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Spring 2025",
+      "languages": [
+        "Telugu",
+        "Tamil",
+        "Hindi",
+        "Kannada",
+        "Malayalam"
+      ],
+      "genres": [
+        "Romantic Horror Comedy",
+        "Fantasy"
+      ],
+      "territories": [
+        "Pan-European Theatrical Distribution"
+      ],
+      "synopsis": "A grand spectacle blending romantic charm, gothic supernatural intrigue, and majestic visual effects starring Rebel Star Prabhas in a charismatic, never-before-seen avatar.",
+      "director": "Maruthi",
+      "cast": [
+        "Prabhas",
+        "Malavika Mohanan",
+        "Nidhhi Agerwal"
+      ],
+      "bannerGradient": "from-indigo-950 via-slate-950 to-neutral-950",
+      "accentColor": "#C084FC",
+      "featured": true,
+      "published": true,
+      "kdmFormat": "DCI 4K Scope • Dolby Atmos"
+    },
+    {
+      "id": "m-5",
+      "slug": "peddi",
+      "title": "Peddi",
+      "status": "Now Showing",
+      "releaseYear": 2025,
+      "releaseDate": "Currently in Theatres",
+      "languages": [
+        "Telugu",
+        "Tamil"
+      ],
+      "genres": [
+        "Period Drama",
+        "Action"
+      ],
+      "territories": [
+        "Germany",
+        "Netherlands",
+        "United Kingdom",
+        "Poland"
+      ],
+      "synopsis": "A deeply emotional rural saga capturing resilience, ancestral honor, and unyielding courage across turbulent times with breathtaking widescreen cinematography.",
+      "director": "Creative Visionary Team",
+      "bannerGradient": "from-orange-950 via-zinc-950 to-neutral-950",
+      "accentColor": "#F97316",
+      "featured": true,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1 Theatrical Audio"
+    },
+    {
+      "id": "m-6",
+      "slug": "karuppu",
+      "title": "Karuppu",
+      "status": "Now Showing",
+      "releaseYear": 2025,
+      "releaseDate": "Exhibiting Across Selected Hubs",
+      "languages": [
+        "Tamil"
+      ],
+      "genres": [
+        "Neo-Noir Thriller",
+        "Crime"
+      ],
+      "territories": [
+        "France",
+        "United Kingdom",
+        "Switzerland"
+      ],
+      "synopsis": "A gritty, atmospheric neo-noir investigation through rain-drenched urban alleys, following a relentless investigator pursuing truth against escalating shadowy conspiracies.",
+      "director": "Award-Winning Filmmaker",
+      "bannerGradient": "from-zinc-900 via-neutral-950 to-black",
+      "accentColor": "#A1A1AA",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K Scope • 5.1 Surround"
+    },
+    {
+      "id": "m-7",
+      "slug": "patriot",
+      "title": "Patriot",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Summer 2025",
+      "languages": [
+        "Hindi",
+        "Tamil",
+        "Telugu"
+      ],
+      "genres": [
+        "Espionage Thriller",
+        "Patriotic Action"
+      ],
+      "territories": [
+        "Europe-Wide Distribution"
+      ],
+      "synopsis": "An espionage thriller navigating covert diplomatic corridors and border tensions, chronicling the bravery of unsung intelligence operatives on critical overseas missions.",
+      "director": "Acclaimed Action Specialist",
+      "bannerGradient": "from-emerald-950 via-zinc-950 to-neutral-950",
+      "accentColor": "#10B981",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 4K • Dolby Atmos"
+    },
+    {
+      "id": "m-8",
+      "slug": "dhurandhar",
+      "title": "Dhurandhar",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Late 2025",
+      "languages": [
+        "Hindi"
+      ],
+      "genres": [
+        "Spy Action Thriller"
+      ],
+      "territories": [
+        "United Kingdom",
+        "Germany",
+        "Austria",
+        "Georgia"
+      ],
+      "synopsis": "A gripping geopolitical intelligence thriller tracking clandestine operations, undercover alliances, and international intrigue across Eurasian borders.",
+      "director": "Renowned Directorial Duo",
+      "bannerGradient": "from-cyan-950 via-neutral-950 to-zinc-950",
+      "accentColor": "#06B6D4",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 4K Scope • Dolby Atmos"
+    },
+    {
+      "id": "m-9",
+      "slug": "jana-nayagan",
+      "title": "Jana Nayagan",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Festive Season 2025",
+      "languages": [
+        "Tamil",
+        "Telugu"
+      ],
+      "genres": [
+        "Political Drama",
+        "Action"
+      ],
+      "territories": [
+        "United Kingdom",
+        "France",
+        "Nordics",
+        "Germany"
+      ],
+      "synopsis": "A hard-hitting political epic portraying the rise of a grassroots champion challenging established political hierarchies to deliver justice to ordinary citizens.",
+      "director": "Celebrated Political Cinema Maestro",
+      "bannerGradient": "from-amber-900 via-stone-950 to-black",
+      "accentColor": "#F59E0B",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K/4K • Dolby 7.1"
+    },
+    {
+      "id": "m-10",
+      "slug": "eko",
+      "title": "Eko",
+      "status": "Upcoming",
+      "releaseYear": 2025,
+      "releaseDate": "Coming Soon",
+      "languages": [
+        "Malayalam",
+        "Tamil"
+      ],
+      "genres": [
+        "Psychological Mystery",
+        "Sci-Fi"
+      ],
+      "territories": [
+        "UK",
+        "Ireland",
+        "Germany",
+        "Netherlands"
+      ],
+      "synopsis": "An intriguing psychological mystery exploring perception, memory echoes, and time distortions within an isolated alpine research station.",
+      "director": "Visionary Indie Auteur",
+      "bannerGradient": "from-sky-950 via-slate-950 to-neutral-950",
+      "accentColor": "#38BDF8",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • Uncompressed 5.1"
+    },
+    {
+      "id": "m-11",
+      "slug": "tourist-family",
+      "title": "Tourist Family",
+      "status": "Previously Distributed",
+      "releaseYear": 2024,
+      "releaseDate": "Distributed Across Europe",
+      "languages": [
+        "Tamil",
+        "Malayalam"
+      ],
+      "genres": [
+        "Family Comedy",
+        "Adventure"
+      ],
+      "territories": [
+        "United Kingdom",
+        "France",
+        "Germany",
+        "Switzerland"
+      ],
+      "synopsis": "A heartwarming, hilarious comedy charting the misadventures of a traditional multigenerational family embarking on their first overseas European holiday tour.",
+      "director": "Family Entertainer Director",
+      "bannerGradient": "from-teal-950 via-neutral-950 to-zinc-950",
+      "accentColor": "#14B8A6",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1 Surround"
+    },
+    {
+      "id": "m-12",
+      "slug": "hit",
+      "title": "HIT",
+      "status": "Previously Distributed",
+      "releaseYear": 2024,
+      "releaseDate": "Theatrical Circuit Completed",
+      "languages": [
+        "Telugu",
+        "Hindi"
+      ],
+      "genres": [
+        "Homicide Investigative Thriller"
+      ],
+      "territories": [
+        "United Kingdom",
+        "Germany",
+        "Poland"
+      ],
+      "synopsis": "The acclaimed investigative franchise chronicling the edge-of-the-seat case investigations of the Homicide Intervention Team against an enigmatic mastermind.",
+      "director": "Sailesh Kolanu",
+      "bannerGradient": "from-rose-950 via-zinc-950 to-black",
+      "accentColor": "#F43F5E",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1 Dolby"
+    },
+    {
+      "id": "m-13",
+      "slug": "gymkhana",
+      "title": "Gymkhana",
+      "status": "Previously Distributed",
+      "releaseYear": 2024,
+      "releaseDate": "Select Overseas Cities",
+      "languages": [
+        "Malayalam"
+      ],
+      "genres": [
+        "Sports Drama",
+        "Coming-of-Age"
+      ],
+      "territories": [
+        "UK",
+        "Ireland",
+        "Germany"
+      ],
+      "synopsis": "A spirited sports drama celebrating grassroots athletic grit, camaraderie, and local tournament dreams with uplifting music and vibrant realism.",
+      "director": "Acclaimed Sports Director",
+      "bannerGradient": "from-lime-950 via-stone-950 to-neutral-950",
+      "accentColor": "#84CC16",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1"
+    },
+    {
+      "id": "m-14",
+      "slug": "kalamkaval",
+      "title": "Kalamkaval",
+      "status": "Previously Distributed",
+      "releaseYear": 2024,
+      "releaseDate": "European Distribution Run",
+      "languages": [
+        "Malayalam",
+        "Tamil"
+      ],
+      "genres": [
+        "Crime Investigation",
+        "Mystery"
+      ],
+      "territories": [
+        "France",
+        "United Kingdom",
+        "Germany"
+      ],
+      "synopsis": "A gripping procedural following an experienced rural officer unraveling a long-buried cold case that threatens powerful local families.",
+      "director": "Realistic Cinema Pioneer",
+      "bannerGradient": "from-violet-950 via-zinc-950 to-neutral-950",
+      "accentColor": "#8B5CF6",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K Scope • 5.1"
+    },
+    {
+      "id": "m-15",
+      "slug": "ustaad",
+      "title": "Ustaad",
+      "status": "Previously Distributed",
+      "releaseYear": 2023,
+      "releaseDate": "Theatrical Premiere Tour",
+      "languages": [
+        "Telugu"
+      ],
+      "genres": [
+        "Aviation Drama",
+        "Romantic Comedy"
+      ],
+      "territories": [
+        "United Kingdom",
+        "Germany"
+      ],
+      "synopsis": "An inspiring drama centered on a spirited young pilot overcoming personal adversity, discovering purpose in flight, and touching hearts.",
+      "director": "Indie Feature Director",
+      "bannerGradient": "from-blue-950 via-slate-950 to-neutral-950",
+      "accentColor": "#3B82F6",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1"
+    },
+    {
+      "id": "m-16",
+      "slug": "aram",
+      "title": "Aram",
+      "status": "Previously Distributed",
+      "releaseYear": 2023,
+      "releaseDate": "Special Theatrical Screening Series",
+      "languages": [
+        "Tamil"
+      ],
+      "genres": [
+        "Social Drama",
+        "Inspirational"
+      ],
+      "territories": [
+        "United Kingdom",
+        "France",
+        "Switzerland"
+      ],
+      "synopsis": "A commanding social drama presenting a determined district administrator confronting bureaucracy and crisis to protect vulnerable villagers.",
+      "director": "Gopi Nainar",
+      "bannerGradient": "from-amber-950 via-zinc-950 to-black",
+      "accentColor": "#D97706",
+      "featured": false,
+      "published": true,
+      "kdmFormat": "DCI 2K • 5.1 Surround"
+    }
+  ],
+  "projects": [
+    {
+      "id": "proj-1",
+      "slug": "good-bad-ugly-uk-circuit",
+      "filmTitle": "Good Bad Ugly",
+      "country": "United Kingdom",
+      "countryCode": "GB",
+      "city": "London & Midlands",
+      "venue": "Leading Multiplex Circuits",
+      "year": 2025,
+      "dateString": "Q1 2025 Exhibition Cycle",
+      "approvedHighlights": "Multi-city DCI-compliant theatrical screening run across UK metropolitan centers.",
+      "status": "Current",
+      "detailsConfirmed": true,
+      "accentGradient": "from-amber-900 to-yellow-950"
+    },
+    {
+      "id": "proj-2",
+      "slug": "peddi-germany-release",
+      "filmTitle": "Peddi",
+      "country": "Germany",
+      "countryCode": "DE",
+      "city": "Frankfurt & Berlin",
+      "venue": "Premier Partner Theatres",
+      "year": 2025,
+      "dateString": "Winter 2025",
+      "approvedHighlights": "Synchronized weekend premiere screenings serving diaspora communities.",
+      "status": "Current",
+      "detailsConfirmed": true,
+      "accentGradient": "from-orange-950 to-zinc-900"
+    },
+    {
+      "id": "proj-3",
+      "slug": "karuppu-france-exhibition",
+      "filmTitle": "Karuppu",
+      "country": "France",
+      "countryCode": "FR",
+      "city": "Paris & Lyon",
+      "venue": "Independent Cinema Partner Network",
+      "year": 2025,
+      "dateString": "Early 2025",
+      "approvedHighlights": "Curated weekend showings with complete subtitling for French audiences.",
+      "status": "Current",
+      "detailsConfirmed": true,
+      "accentGradient": "from-zinc-900 to-black"
+    },
+    {
+      "id": "proj-4",
+      "slug": "tourist-family-pan-europe",
+      "filmTitle": "Tourist Family",
+      "country": "Netherlands",
+      "countryCode": "NL",
+      "city": "Amsterdam & Rotterdam",
+      "venue": "Urban Theatre Hubs",
+      "year": 2024,
+      "dateString": "Autumn 2024",
+      "approvedHighlights": "Successful family comedy run across Benelux theatrical locations.",
+      "status": "Completed",
+      "detailsConfirmed": true,
+      "accentGradient": "from-teal-950 to-zinc-900"
+    },
+    {
+      "id": "proj-5",
+      "slug": "hit-eastern-europe",
+      "filmTitle": "HIT",
+      "country": "Poland",
+      "countryCode": "PL",
+      "city": "Warsaw & Krakow",
+      "venue": "Partner Theatrical Screens",
+      "year": 2024,
+      "dateString": "Mid 2024",
+      "approvedHighlights": "Specialized investigative thriller screenings for Indian cinema aficionados.",
+      "status": "Completed",
+      "detailsConfirmed": true,
+      "accentGradient": "from-rose-950 to-zinc-950"
+    },
+    {
+      "id": "proj-6",
+      "slug": "kalamkaval-switzerland",
+      "filmTitle": "Kalamkaval",
+      "country": "Switzerland",
+      "countryCode": "CH",
+      "city": "Zurich & Geneva",
+      "venue": "City Center Cinema Venues",
+      "year": 2024,
+      "dateString": "Summer 2024",
+      "approvedHighlights": "Select regional screenings coordinated with local cultural associations.",
+      "status": "Completed",
+      "detailsConfirmed": true,
+      "accentGradient": "from-purple-950 to-zinc-950"
+    },
+    {
+      "id": "proj-7",
+      "slug": "gymkhana-ireland",
+      "filmTitle": "Gymkhana",
+      "country": "Ireland",
+      "countryCode": "IE",
+      "city": "Dublin & Cork",
+      "venue": "Partner Theatres",
+      "year": 2024,
+      "dateString": "Spring 2024",
+      "approvedHighlights": "Sports drama theatrical tour attracting diaspora youth organizations.",
+      "status": "Completed",
+      "detailsConfirmed": true,
+      "accentGradient": "from-emerald-950 to-black"
+    },
+    {
+      "id": "proj-8",
+      "slug": "upcoming-european-circuit-alpha",
+      "filmTitle": "Jailer 2 & Thug Life Upcoming European Tour",
+      "country": "Europe-Wide",
+      "countryCode": "EU",
+      "city": "Key European Capitals",
+      "venue": "Circuit Partners (Open for Enquiries)",
+      "year": 2025,
+      "dateString": "Scheduled 2025 - 2026",
+      "approvedHighlights": "Project details to be confirmed upon final theatrical booking locks. Open for exhibitor allotment.",
+      "status": "Scheduled",
+      "detailsConfirmed": false,
+      "accentGradient": "from-amber-950 via-zinc-900 to-black"
+    }
+  ],
+  "testimonials": [
+    {
+      "id": "test-1",
+      "author": "European Multiplex Operator",
+      "role": "Programming Director",
+      "organization": "Independent Cinema Network",
+      "city": "London",
+      "country": "United Kingdom",
+      "quote": "Testimonial pending approval from partner management. Alagu Production ensures professional DCI DCP delivery and punctual KDM key generation.",
+      "isApproved": false,
+      "note": "Pending formal written marketing clearance from operator."
+    },
+    {
+      "id": "test-2",
+      "author": "Regional Theatre Manager",
+      "role": "Operations Lead",
+      "organization": "Continental Exhibition Partner",
+      "city": "Frankfurt",
+      "country": "Germany",
+      "quote": "Testimonial pending approval. Strong audience turnout and reliable liaison for multilingual Indian premiere events.",
+      "isApproved": false,
+      "note": "Internal clearance requested for exhibition portfolio release."
+    },
+    {
+      "id": "test-3",
+      "author": "Independent Film Programmer",
+      "role": "Senior Curator",
+      "organization": "Cultural Screen Venues",
+      "city": "Paris",
+      "country": "France",
+      "quote": "Testimonial pending approval. Seamless coordination for localized subtitling and promotional materials.",
+      "isApproved": false,
+      "note": "Verification in progress."
+    }
+  ],
+  "enquiries": [
+    {
+      "country": "France",
+      "city": "Paris",
+      "cinemaName": "Grand Rex Multiplex",
+      "contactName": "Antoine Laurent",
+      "phoneCountryCode": "+33",
+      "phoneNumber": "612345678",
+      "email": "programming@legrandrex.fr",
+      "selectedFilm": "Jailer 2 & Thug Life",
+      "message": "Requesting screening rights for Paris premiere weekend in Grand Hall.",
+      "consent": true,
+      "id": "enq-1794159212716-m2nb",
+      "createdAt": "2026-11-08T17:33:32.716Z",
+      "status": "New"
+    },
+    {
+      "id": "enq-sample-1",
+      "createdAt": "2026-11-08T16:53:28.531Z",
+      "country": "United Kingdom",
+      "city": "Birmingham",
+      "cinemaName": "Midlands Crown Multiplex",
+      "contactName": "Liam Davies",
+      "phoneCountryCode": "+44",
+      "phoneNumber": "7911123456",
+      "email": "screenings@midlandscrown.co.uk",
+      "message": "Interested in booking Jailer 2 and Thug Life for our prime weekend slots in screens 1 & 3.",
+      "selectedFilm": "Jailer 2",
+      "status": "In Discussion",
+      "consent": true
+    }
+  ],
+  "settings": {
+    "companyName": "Alagu Production",
+    "tagline": "Overseas Indian Movie Distribution & Theatrical Exhibition",
+    "phone": "+995 504 88 79 72",
+    "whatsapp": "+995504887972",
+    "email": "alaguproduction@gmail.com",
+    "headquarters": "Europe (Operational across UK, Germany, France, Benelux, Nordics, Switzerland, Poland & Georgia)",
+    "europeanPresence": [
+      "United Kingdom",
+      "Germany",
+      "France",
+      "Netherlands",
+      "Switzerland",
+      "Ireland",
+      "Poland",
+      "Georgia",
+      "Sweden",
+      "Norway"
+    ],
+    "projectsCountClaim": "16+ Projects",
+    "projectsCountConfirmed": false,
+    "socials": {
+      "instagram": "",
+      "facebook": "",
+      "twitter": "",
+      "youtube": "",
+      "linkedin": ""
+    }
+  }
+}

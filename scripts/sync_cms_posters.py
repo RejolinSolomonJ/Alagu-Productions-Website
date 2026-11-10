@@ -13,3 +13,4 @@ with open(path, 'w', encoding='utf-8') as f:
     json.dump(data, f, indent=2)
 
 print("Updated data/cms-state.json with posterUrl for all movies.")
+

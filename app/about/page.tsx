@@ -31,7 +31,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
           <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] border border-white/10 text-gold text-xs font-semibold uppercase tracking-wider mb-5">
             <Globe className="w-3.5 h-3.5" />
-            <span>Corporate Profile &amp; Theatrical Vision</span>
+            <span>Corporate Profile &bull; Partner of MADSOULS PRODUCTION LLC</span>
           </div>
 
           <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight">
@@ -64,7 +64,7 @@ export default function AboutPage() {
 
               {/* Exact Copy required by User */}
               <p className="text-base sm:text-lg text-cinema-200 leading-relaxed font-normal">
-                Alagu Production is an overseas Indian movie distribution and exhibition company based in Europe, dedicated to bringing the best of Indian cinema to audiences worldwide. With experience across 16+ projects<sup className="text-gold font-bold">*</sup> and a portfolio of successful projects, we focus on connecting Indian films with international audiences through strategic distribution and theatrical exhibition.
+                Alagu Production is an overseas Indian movie distribution and exhibition company based in Europe and an official partner of <strong className="text-white font-semibold">MADSOULS PRODUCTION LLC</strong>, dedicated to bringing the best of Indian cinema to audiences worldwide. With experience across 16+ projects<sup className="text-gold font-bold">*</sup> and a portfolio of successful projects, we focus on connecting Indian films with international audiences through strategic distribution and theatrical exhibition.
               </p>
 
               <p className="text-base sm:text-lg text-cinema-200 leading-relaxed font-normal">

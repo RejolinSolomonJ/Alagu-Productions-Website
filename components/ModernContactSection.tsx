@@ -180,9 +180,12 @@ export function ModernContactSection({
             </div>
 
             {/* Bottom Status Guarantee */}
-            <div className="relative z-10 pt-8 mt-8 border-t border-white/10 flex items-center gap-2 text-xs text-cinema-400 font-mono">
-              <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-              <span>Direct studio liaison &bull; 24/7 DCI KDM dispatch desk</span>
+            <div className="relative z-10 pt-8 mt-8 border-t border-white/10 flex flex-wrap items-center justify-between gap-2 text-xs text-cinema-400 font-mono">
+              <div className="flex items-center gap-2 text-cinema-300">
+                <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
+                <span>Partner of <strong className="text-white font-semibold">MADSOULS PRODUCTION LLC</strong></span>
+              </div>
+              <span className="text-[11px] text-cinema-400">24/7 DCI KDM dispatch</span>
             </div>
           </div>
 

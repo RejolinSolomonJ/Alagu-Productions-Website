@@ -69,10 +69,10 @@ export default function HomePage() {
               <div className="absolute top-0 right-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
 
               <div className="relative z-10 space-y-6">
-                <div className="flex items-center justify-between">
-                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-white/[0.05] border border-white/10 text-[11px] font-mono font-medium text-cinema-300">
-                    <Globe2 className="w-3.5 h-3.5 text-gold" />
-                    <span>European Distribution Desk</span>
+                <div className="flex items-center justify-between flex-wrap gap-2">
+                  <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-[11px] font-mono font-medium text-gold-light">
+                    <Sparkles className="w-3.5 h-3.5 text-gold" />
+                    <span>Partner of MADSOULS PRODUCTION LLC</span>
                   </span>
 
                   <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400">
@@ -86,7 +86,7 @@ export default function HomePage() {
                   </h3>
 
                   <p className="text-cinema-200 text-sm sm:text-base leading-relaxed">
-                    Alagu Production is an overseas Indian movie distribution and exhibition company based in Europe, dedicated to bringing the best of Indian cinema to audiences worldwide. With experience across 16+ projects<sup className="text-gold font-bold">*</sup> and a portfolio of successful projects, we focus on connecting Indian films with international audiences through strategic distribution and theatrical exhibition.
+                    Alagu Production is an overseas Indian movie distribution and exhibition company based in Europe and an official partner of <strong className="text-white font-semibold">MADSOULS PRODUCTION LLC</strong>, dedicated to bringing the best of Indian cinema to audiences worldwide. With experience across 16+ projects<sup className="text-gold font-bold">*</sup> and a portfolio of successful projects, we focus on connecting Indian films with international audiences through strategic distribution and theatrical exhibition.
                   </p>
 
                   <p className="text-cinema-300 text-sm sm:text-base leading-relaxed">

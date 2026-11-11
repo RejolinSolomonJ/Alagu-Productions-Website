@@ -21,9 +21,9 @@ interface CinematicHeroProps {
 export function CinematicHero({
   videoSrc = HERO_VIDEO_CONFIG.videoSrc,
   posterSrc = HERO_VIDEO_CONFIG.posterSrc,
-  badgeText = 'Overseas Indian Film Distribution & Theatrical Exhibition',
+  badgeText = 'Overseas Indian Film Distribution • Partner of MADSOULS PRODUCTION LLC',
   headline,
-  subtext = 'Europe’s dedicated distribution partner connecting premier Indian cinema blockbusters to leading multiplexes, independent theatre operators, and diaspora audiences.',
+  subtext = 'Europe’s dedicated distribution partner connecting premier Indian cinema blockbusters to leading multiplexes, independent theatre operators, and diaspora audiences in strategic partnership with MADSOULS PRODUCTION LLC.',
   primaryCtaText = 'Become an Exhibition Partner',
   primaryCtaHref = '/partner',
   secondaryCtaText = 'Explore Theatrical Slate',

@@ -2,6 +2,7 @@ import { SiteSettings } from '../types';
 
 export const INITIAL_SETTINGS: SiteSettings = {
   companyName: 'Alagu Production',
+  strategicPartner: 'MADSOULS PRODUCTION LLC',
   tagline: 'Overseas Indian Movie Distribution & Theatrical Exhibition',
   phone: '+995 504 88 79 72',
   whatsapp: '+995504887972',

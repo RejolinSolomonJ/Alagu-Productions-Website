@@ -68,6 +68,7 @@ export interface Testimonial {
 
 export interface SiteSettings {
   companyName: string;
+  strategicPartner?: string;
   tagline: string;
   phone: string;
   whatsapp: string;

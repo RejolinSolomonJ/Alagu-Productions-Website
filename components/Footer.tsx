@@ -22,6 +22,10 @@ export function Footer() {
           {/* Brand Column (Frosted Glass Container) */}
           <div className="lg:col-span-2 space-y-5 p-7 rounded-3xl bg-white/[0.02] backdrop-blur-xl border border-white/10 shadow-xl">
             <Logo size="lg" />
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-gold/10 border border-gold/25 text-xs text-gold-light font-mono">
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
+              <span>Partner of <strong className="text-white font-semibold">MADSOULS PRODUCTION LLC</strong></span>
+            </div>
             <p className="text-sm text-cinema-300 max-w-sm leading-relaxed">
               Europe&apos;s trusted overseas Indian film distribution and exhibition partner. Connecting visionary Indian cinema with European audiences through premier theatrical distribution.
             </p>

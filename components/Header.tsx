@@ -75,7 +75,7 @@ export function Header() {
             <div className="flex items-center gap-3 flex-shrink-0">
               <Link
                 href="/partner"
-                className="hidden sm:inline-flex items-center justify-center gap-2 px-4 py-2 rounded-md text-xs sm:text-sm font-semibold text-cinema-950 bg-gold hover:bg-gold-light transition-all duration-200 shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
+                className="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle transition-all duration-200 focus:outline-none"
               >
                 <span>Partner With Us</span>
                 <ArrowUpRight className="w-3.5 h-3.5" />

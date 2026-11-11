@@ -103,9 +103,9 @@ export function CinematicHero({
       {/* Hero Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center">
         {/* Subtitle Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cinema-900/90 border border-cinema-750 text-cinema-300 text-xs font-medium tracking-wide mb-6 backdrop-blur-md">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cinema-900/90 border border-white/10 text-cinema-300 text-xs font-medium tracking-wide mb-6 backdrop-blur-md">
           <span className="w-1.5 h-1.5 rounded-full bg-gold" />
-          <span>{badgeText}</span>
+          <span className="font-mono text-[11px] uppercase tracking-wider">{badgeText}</span>
         </div>
 
         {/* Clean, Majestic Headings */}
@@ -113,9 +113,9 @@ export function CinematicHero({
           {headline ? (
             headline
           ) : (
-            <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white tracking-tight leading-[1.12]">
+            <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight leading-[1.08]">
               Bringing the Best of{' '}
-              <span className="text-gold font-normal">Indian Cinema</span>{' '}
+              <span className="font-serif italic font-normal text-gold">Indian Cinema</span>{' '}
               to Audiences Worldwide
             </h1>
           )}
@@ -135,7 +135,7 @@ export function CinematicHero({
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
           <Link
             href={primaryCtaHref}
-            className="w-full sm:w-auto px-7 py-3 rounded-md text-sm font-semibold text-cinema-950 bg-gold hover:bg-gold-light transition-colors duration-200 flex items-center justify-center gap-2 shadow-sm"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.99] transition-all flex items-center justify-center gap-2"
           >
             <Film className="w-4 h-4 text-cinema-950" />
             <span>{primaryCtaText}</span>
@@ -144,9 +144,9 @@ export function CinematicHero({
 
           <Link
             href={secondaryCtaHref}
-            className="w-full sm:w-auto px-7 py-3 rounded-md text-sm font-medium text-cinema-200 hover:text-white bg-cinema-900/90 hover:bg-cinema-850 border border-cinema-750 transition-colors duration-200 flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-lg text-sm font-medium text-cinema-200 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-gold/30 transition-all flex items-center justify-center gap-2"
           >
-            <PlayCircle className="w-4 h-4 text-cinema-400" />
+            <PlayCircle className="w-4 h-4 text-gold" />
             <span>{secondaryCtaText}</span>
           </Link>
         </div>

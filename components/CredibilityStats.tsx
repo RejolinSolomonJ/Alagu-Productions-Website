@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState, useRef } from 'react';
 import Image from 'next/image';
-import { Film, Globe, Building2, ShieldCheck, Info } from 'lucide-react';
+import { Film, Globe, Building2, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 interface CredibilityStatsProps {
   className?: string;
@@ -21,7 +21,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
         if (entries[0].isIntersecting && !hasAnimated) {
           setHasAnimated(true);
           TARGETS.forEach((target, i) => {
-            const duration = 1500;
+            const duration = 1400;
             const steps = 30;
             const stepTime = duration / steps;
             let current = 0;
@@ -54,31 +54,31 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
 
   return (
     <div ref={containerRef} className={`w-full relative z-10 ${className}`}>
-      {/* 4-Box Modern Bento Layout Matching User Reference Design */}
+      {/* 4-Card Bento Grid Matching User's Reference Architecture */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
         
-        {/* Box 1: Theatrical Projects (Obsidian Glass Bento Card) */}
-        <div className="relative rounded-[28px] bg-[#0e101a]/85 backdrop-blur-xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[310px] shadow-xl hover:-translate-y-1 hover:border-gold/40 transition-all duration-300 group overflow-hidden">
-          {/* Subtle Ambient Top Glow */}
-          <div className="absolute -top-16 -right-16 w-32 h-32 bg-gold/10 rounded-full blur-2xl pointer-events-none group-hover:bg-gold/20 transition-all" />
+        {/* Card 1: Neutral Obsidian Card (Matches Box 1 in Reference) */}
+        <div className="relative rounded-2xl bg-[#0e1017] border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-card-clean hover:border-gold/40 transition-all duration-300 group overflow-hidden">
+          {/* Subtle Ambient Backlight */}
+          <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-full blur-2xl pointer-events-none group-hover:bg-gold/10 transition-all" />
 
-          {/* Top Row: Icon + Audit Badge */}
+          {/* Top Row: Icon Squircle + Audit Badge */}
           <div className="flex items-center justify-between relative z-10">
-            <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 group-hover:border-gold/30 transition-all shadow-sm">
-              <Film className="w-5 h-5" />
+            <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-gold group-hover:border-gold/40 group-hover:scale-105 transition-all shadow-sm">
+              <Film className="w-5 h-5 text-gold" />
             </div>
 
             <span
-              className="inline-flex items-center gap-1 text-[10px] text-gold-light bg-gold/15 px-2.5 py-1 rounded-full border border-gold/30 font-mono font-medium shadow-sm"
+              className="inline-flex items-center gap-1.5 text-[10px] text-gold-light bg-gold/10 px-2.5 py-1 rounded-full border border-gold/25 font-mono font-medium tracking-wide"
               title="Claim subject to formal company record reconciliation"
             >
-              <Info className="w-3 h-3 text-gold" />
+              <span className="w-1.5 h-1.5 rounded-full bg-gold animate-pulse" />
               <span>Audit Pending</span>
             </span>
           </div>
 
-          {/* Middle & Bottom Content */}
-          <div className="relative z-10 mt-6 space-y-2">
+          {/* Metric & Description */}
+          <div className="relative z-10 mt-6 space-y-1.5">
             <span className="text-[11px] font-semibold text-cinema-400 uppercase tracking-widest block font-sans">
               Theatrical Portfolio
             </span>
@@ -86,82 +86,64 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
             <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-baseline font-sans">
               <span>{counts[0]}</span>
               <span className="text-gold text-3xl font-semibold ml-0.5">+</span>
-              <sup className="text-gold text-lg ml-0.5">*</sup>
+              <sup className="text-gold text-lg ml-0.5 font-normal">*</sup>
             </div>
 
             <p className="text-xs sm:text-sm text-cinema-300 leading-relaxed pt-1">
-              Pan-European theatrical distribution &amp; premiere exhibition track record.
+              Pan-European theatrical distribution &amp; premier exhibition track record.
             </p>
           </div>
         </div>
 
-        {/* Box 2: European Territories (Vibrant Signature Gold Accent Card) */}
-        <div className="relative rounded-[28px] bg-gradient-to-br from-[#D4AF37] via-[#C89D3C] to-[#AA7E24] p-6 sm:p-7 flex flex-col justify-between min-h-[310px] shadow-[0_15px_35px_rgba(200,157,60,0.3)] hover:-translate-y-1 hover:shadow-[0_20px_45px_rgba(200,157,60,0.45)] transition-all duration-300 group overflow-hidden">
-          {/* Top Subtle Specular Sheen */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/15 via-transparent to-white/20 pointer-events-none" />
+        {/* Card 2: THE LUXURY CHAMPAGNE GOLD HIGHLIGHT CARD (Matches Vibrant Box 2 in Reference) */}
+        <div className="relative rounded-2xl bg-gradient-to-br from-[#E6CA70] via-[#D4AF37] to-[#B38D22] text-[#0A0B0E] p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-[0_12px_36px_rgba(212,175,55,0.28)] border border-[#F5DF9E]/60 transition-all duration-300 group hover:scale-[1.01] overflow-hidden">
+          {/* Subtle glossy sheen line */}
+          <div className="absolute top-0 inset-x-0 h-[2px] bg-white/40" />
+          <div className="absolute -top-12 -right-12 w-44 h-44 bg-white/20 rounded-full blur-2xl pointer-events-none" />
 
-          {/* Top Icon Badge */}
+          {/* Top Row: Dark Squircle Icon + Scope Pill */}
           <div className="flex items-center justify-between relative z-10">
-            <div className="w-12 h-12 rounded-2xl bg-cinema-950/20 border border-cinema-950/20 flex items-center justify-center text-cinema-950 group-hover:scale-105 transition-all shadow-sm">
-              <Globe className="w-5 h-5 text-cinema-950" />
+            <div className="w-12 h-12 rounded-xl bg-[#0A0B0E]/15 border border-[#0A0B0E]/15 flex items-center justify-center text-[#0A0B0E] group-hover:scale-105 transition-all shadow-sm">
+              <Globe className="w-5 h-5 text-[#0A0B0E]" />
             </div>
 
-            <span className="text-[10px] font-bold text-cinema-950/80 bg-cinema-950/10 px-2.5 py-1 rounded-full uppercase tracking-wider font-mono">
+            <span className="text-[10px] font-bold text-[#0A0B0E] bg-[#0A0B0E]/12 px-2.5 py-1 rounded-full border border-[#0A0B0E]/15 uppercase tracking-wider font-mono">
               Pan-Europe
             </span>
           </div>
 
-          {/* Middle & Bottom Content */}
-          <div className="relative z-10 mt-5 space-y-2">
-            <span className="text-[11px] font-bold text-cinema-950/80 uppercase tracking-widest block font-sans">
+          {/* Content */}
+          <div className="relative z-10 mt-6 space-y-2">
+            <span className="text-[11px] font-bold text-[#0A0B0E]/80 uppercase tracking-widest block font-sans">
               Territories Covered
             </span>
 
-            <div className="text-4xl sm:text-5xl font-black text-cinema-950 tracking-tight font-sans">
+            <div className="text-4xl sm:text-5xl font-black text-[#0A0B0E] tracking-tight flex items-baseline font-sans">
               <span>{counts[1]}</span>
-              <span className="text-3xl font-bold ml-0.5">+</span>
+              <span className="text-3xl font-extrabold ml-0.5 text-[#0A0B0E]">+</span>
             </div>
 
-            <p className="text-xs sm:text-sm text-cinema-950/90 font-medium leading-relaxed">
-              Active screening circuits in UK, Germany, France, Nordics, Benelux &amp; Georgia.
+            <p className="text-xs sm:text-sm text-[#0A0B0E]/85 font-medium leading-relaxed">
+              Active screening circuits in UK, Germany, France, Nordics, Benelux &amp; beyond.
             </p>
 
-            {/* Circuit Country Avatar Badges matching user reference */}
-            <div className="pt-2 flex items-center -space-x-2">
-              <span
-                className="w-7 h-7 rounded-full bg-cinema-950 text-white text-[10px] font-bold flex items-center justify-center border-2 border-amber-300 shadow-sm"
-                title="United Kingdom"
-              >
-                🇬🇧
-              </span>
-              <span
-                className="w-7 h-7 rounded-full bg-cinema-950 text-white text-[10px] font-bold flex items-center justify-center border-2 border-amber-300 shadow-sm"
-                title="Germany"
-              >
-                🇩🇪
-              </span>
-              <span
-                className="w-7 h-7 rounded-full bg-cinema-950 text-white text-[10px] font-bold flex items-center justify-center border-2 border-amber-300 shadow-sm"
-                title="France"
-              >
-                🇫🇷
-              </span>
-              <span
-                className="w-7 h-7 rounded-full bg-cinema-950 text-white text-[10px] font-bold flex items-center justify-center border-2 border-amber-300 shadow-sm"
-                title="Netherlands"
-              >
-                🇳🇱
-              </span>
-              <span className="h-7 px-2 rounded-full bg-cinema-950 text-gold-light text-[10px] font-bold flex items-center justify-center border-2 border-amber-300 shadow-sm">
-                +6 more
-              </span>
+            {/* Bottom Typographic Territory Chips (Matches avatar strip in Reference) */}
+            <div className="pt-2 flex flex-wrap gap-1.5">
+              {['UK', 'Germany', 'France', 'Benelux', '+6 more'].map((t) => (
+                <span
+                  key={t}
+                  className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#0A0B0E]/15 text-[#0A0B0E] border border-[#0A0B0E]/20"
+                >
+                  {t}
+                </span>
+              ))}
             </div>
           </div>
         </div>
 
-        {/* Box 3: Exhibitor Partners (Photo Card with Overlapping Floating Badge) */}
-        <div className="relative rounded-[28px] overflow-hidden min-h-[310px] border border-white/15 shadow-xl group hover:-translate-y-1 hover:border-gold/40 transition-all duration-300 flex flex-col justify-between">
-          {/* Full-Bleed Modern Cinema Architecture Image */}
+        {/* Card 3: CINEMA ARCHITECTURE PHOTO CARD WITH OVERLAPPING FLOATING BADGE (Matches Box 3 in Reference) */}
+        <div className="relative rounded-2xl overflow-hidden min-h-[320px] border border-white/15 shadow-card-clean group hover:border-gold/50 transition-all duration-300 flex flex-col justify-between bg-[#0e1017]">
+          {/* Cinema Auditorium Photo */}
           <Image
             src="/stats/multiplex-screens.jpg"
             alt="European Multiplex Circuit"
@@ -170,59 +152,60 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
           />
 
-          {/* Vignette Overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/35 to-black/30 pointer-events-none" />
+          {/* Subtle Top Gradient for Header Contrast */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/25 pointer-events-none" />
 
-          {/* Top Pill on Image */}
+          {/* Top Pill on Photo */}
           <div className="relative z-10 p-5 sm:p-6 flex items-center justify-between">
-            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-[10px] font-semibold text-white border border-white/20 uppercase tracking-wider font-mono">
+            <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/75 backdrop-blur-md text-[10px] font-semibold text-white border border-white/20 uppercase tracking-wider font-mono">
               <Building2 className="w-3.5 h-3.5 text-gold" />
-              <span>Multiplex Network</span>
+              <span>Multiplex Circuit</span>
             </span>
           </div>
 
-          {/* Overlapping Floating Stat Badge Card (matching the blue box in user screenshot) */}
-          <div className="relative z-10 m-4 sm:m-5 p-4 rounded-2xl bg-[#090b14]/90 backdrop-blur-xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
+          {/* Overlapping Floating Badge Box (Exact Match to Blue Floating Pill in Reference Box 3) */}
+          <div className="relative z-10 m-4 sm:m-5 p-4 rounded-xl bg-[#08090C]/90 backdrop-blur-xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
             <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline font-sans">
               <span>{counts[2]}</span>
               <span className="text-gold text-2xl font-bold ml-0.5">+</span>
             </div>
 
-            <span className="text-xs font-bold text-gold-light uppercase tracking-wider block font-sans">
+            <span className="text-xs font-bold text-white uppercase tracking-wider block font-sans">
               Exhibitor Partners
             </span>
 
             <p className="text-[11px] text-cinema-300 leading-snug">
-              Multiplex circuits &amp; independent screens.
+              Multiplex chains &amp; independent screens across Europe.
             </p>
           </div>
         </div>
 
-        {/* Box 4: DCI Compliance (Obsidian Glass Bento Card) */}
-        <div className="relative rounded-[28px] bg-[#0e101a]/85 backdrop-blur-xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[310px] shadow-xl hover:-translate-y-1 hover:border-gold/40 transition-all duration-300 group overflow-hidden">
+        {/* Card 4: Technical Compliance Neutral Obsidian Card (Matches Box 4 in Reference) */}
+        <div className="relative rounded-2xl bg-[#0e1017] border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-card-clean hover:border-gold/40 transition-all duration-300 group overflow-hidden">
           {/* Subtle Ambient Glow */}
-          <div className="absolute -top-16 -right-16 w-32 h-32 bg-emerald-500/10 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/20 transition-all" />
+          <div className="absolute top-0 right-0 w-36 h-36 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/10 transition-all" />
 
-          {/* Top Icon Badge */}
+          {/* Top Row: Icon Squircle + Verified Status */}
           <div className="flex items-center justify-between relative z-10">
-            <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-emerald-400 group-hover:scale-105 group-hover:border-emerald-400/30 transition-all shadow-sm">
-              <ShieldCheck className="w-5 h-5" />
+            <div className="w-12 h-12 rounded-xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-gold group-hover:border-gold/40 group-hover:scale-105 transition-all shadow-sm">
+              <ShieldCheck className="w-5 h-5 text-gold" />
             </div>
 
-            <span className="text-[10px] font-semibold text-emerald-400 bg-emerald-500/15 px-2.5 py-1 rounded-full border border-emerald-500/30 font-mono">
-              Verified DCI
+            <span className="inline-flex items-center gap-1 text-[10px] font-semibold text-emerald-400 bg-emerald-500/10 px-2.5 py-1 rounded-full border border-emerald-500/25 font-mono">
+              <CheckCircle2 className="w-3 h-3 text-emerald-400" />
+              <span>Verified DCI</span>
             </span>
           </div>
 
-          {/* Middle & Bottom Content */}
-          <div className="relative z-10 mt-6 space-y-2">
+          {/* Metric & Description */}
+          <div className="relative z-10 mt-6 space-y-1.5">
             <span className="text-[11px] font-semibold text-cinema-400 uppercase tracking-widest block font-sans">
               Technical Standards
             </span>
 
             <div className="text-4xl sm:text-5xl font-extrabold text-white tracking-tight flex items-baseline font-sans">
               <span>{counts[3]}</span>
-              <span className="text-emerald-400 text-3xl font-bold ml-0.5">%</span>
+              <span className="text-gold text-3xl font-semibold ml-0.5">%</span>
             </div>
 
             <p className="text-xs sm:text-sm text-cinema-300 leading-relaxed pt-1">
@@ -233,8 +216,8 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
 
       </div>
 
-      {/* Internal CMS / Audit Footnote */}
-      <div className="mt-4 px-2 text-[11px] text-cinema-400 font-sans flex items-center gap-1.5">
+      {/* Internal CMS / Audit Footnote Preserved Verbatim */}
+      <div className="mt-4 px-1 text-[11px] text-cinema-400 font-sans flex items-center gap-1.5">
         <span className="text-gold font-bold">*</span>
         <span>
           Internal Note: &ldquo;16+ projects&rdquo; claim marked pending final archival record confirmation with company audit before print publishing.

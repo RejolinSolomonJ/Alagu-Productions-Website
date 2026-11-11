@@ -75,11 +75,11 @@ export function CinematicHero({
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[92vh] sm:min-h-screen w-full flex items-center justify-center pt-28 sm:pt-32 pb-20 overflow-hidden bg-[#08090C]"
+      className="hero-section relative min-h-[92vh] sm:min-h-screen w-full flex items-center justify-center pt-28 sm:pt-32 pb-20 overflow-hidden bg-[#08090C] transition-colors duration-300"
       aria-label="Hero Section"
     >
       {/* Background Video Layer */}
-      <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+      <div className="hero-media absolute inset-0 z-0 overflow-hidden pointer-events-none transition-opacity duration-500">
         <video
           ref={videoRef}
           autoPlay
@@ -94,14 +94,14 @@ export function CinematicHero({
         </video>
       </div>
 
-      {/* Modern, Balanced Dark Scrim: Deep enough for clean text contrast without muddying video */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-[#08090C]/65 to-[#08090C] pointer-events-none" />
+      {/* Modern, Balanced Scrim Layer */}
+      <div className="hero-scrim-layer absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-[#08090C]/65 to-[#08090C] pointer-events-none transition-all duration-300" />
 
-      {/* Subtle edge vignette */}
-      <div className="absolute inset-0 z-10 [background:radial-gradient(ellipse_at_center,transparent_40%,rgba(8,9,12,0.85)_80%,#08090C_100%)] pointer-events-none" />
+      {/* Edge vignette */}
+      <div className="hero-vignette-layer absolute inset-0 z-10 [background:radial-gradient(ellipse_at_center,transparent_40%,rgba(8,9,12,0.85)_80%,#08090C_100%)] pointer-events-none transition-all duration-300" />
 
       {/* Ambient Color Orb behind Hero */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gold/10 rounded-full blur-[140px] pointer-events-none z-10" />
+      <div className="hero-ambient-orb absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gold/10 rounded-full blur-[140px] pointer-events-none z-10 transition-colors duration-300" />
 
       {/* Hero Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center">
@@ -130,7 +130,7 @@ export function CinematicHero({
         </p>
 
         {/* Key Metrics / Format Box (Frosted Glass Clapperboard) */}
-        <div className="mt-6 sm:mt-8 w-full max-w-2xl">
+        <div className="mt-6 sm:mt-8 w-full max-w-3xl">
           <ClapperboardBanner />
         </div>
 

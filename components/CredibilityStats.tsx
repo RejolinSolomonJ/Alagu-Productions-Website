@@ -157,7 +157,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/25 pointer-events-none" />
 
           {/* Top Pill on Photo (Frosted Glass) */}
-          <div className="relative z-10 p-5 sm:p-6 flex items-center justify-between">
+          <div className="relative z-10 p-5 sm:p-6 flex items-center justify-between preserve-white">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-xl text-[10px] font-semibold text-white border border-white/20 uppercase tracking-wider font-mono shadow-md">
               <Building2 className="w-3.5 h-3.5 text-gold" />
               <span>Multiplex Circuit</span>
@@ -165,7 +165,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
           </div>
 
           {/* Overlapping Floating Frosted Glass Badge Box */}
-          <div className="relative z-10 m-4 sm:m-5 p-4 rounded-2xl bg-[#08090C]/80 backdrop-blur-2xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
+          <div className="preserve-white relative z-10 m-4 sm:m-5 p-4 rounded-2xl bg-[#08090C]/80 backdrop-blur-2xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
             <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline font-sans">
               <span>{counts[2]}</span>
               <span className="text-gold text-2xl font-bold ml-0.5">+</span>

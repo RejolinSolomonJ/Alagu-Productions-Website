@@ -45,7 +45,7 @@ export function MovieCard({ movie }: MovieCardProps) {
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black via-black/75 to-transparent pointer-events-none" />
 
         {/* Top Header Strip: Status badge + Year (Frosted Glass Pills) */}
-        <div className="absolute top-0 inset-x-0 p-3.5 flex items-center justify-between z-10">
+        <div className="preserve-white absolute top-0 inset-x-0 p-3.5 flex items-center justify-between z-10">
           <span
             className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase border shadow-sm ${
               statusStyles[movie.status]
@@ -60,7 +60,7 @@ export function MovieCard({ movie }: MovieCardProps) {
         </div>
 
         {/* Hover Reveal Details (Frosted Glass Overlay) */}
-        <div className="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 z-20">
+        <div className="preserve-white absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-5 z-20">
           <p className="text-xs text-cinema-200 line-clamp-3 leading-relaxed mb-3 font-normal">
             {movie.synopsis}
           </p>

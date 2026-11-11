@@ -86,6 +86,28 @@ html.light h6 {
   color: #0A0D14 !important;
 }
 
+/* Hero section in light mode: transforms into a bright luxury platinum theme */
+html.light .hero-section {
+  background-color: #F8F9FD !important;
+}
+
+html.light .hero-media {
+  opacity: 0.28 !important;
+  filter: contrast(1.15) brightness(1.1);
+}
+
+html.light .hero-scrim-layer {
+  background: linear-gradient(180deg, rgba(248, 249, 253, 0.78) 0%, rgba(248, 249, 253, 0.88) 50%, #F8F9FD 100%) !important;
+}
+
+html.light .hero-vignette-layer {
+  background: radial-gradient(ellipse at center, rgba(255, 255, 255, 0.25) 20%, rgba(248, 249, 253, 0.85) 75%, #F8F9FD 100%) !important;
+}
+
+html.light .hero-ambient-orb {
+  background-color: rgba(212, 175, 55, 0.12) !important;
+}
+
 /* Background overrides in light mode */
 html.light .bg-\[\#08090C\],
 html.light .bg-cinema-950 {
@@ -135,10 +157,66 @@ html.light .text-cinema-400 {
   color: #64748B !important;
 }
 
+/* Deep rich gold in light mode for readability on light backgrounds */
+html.light .text-gold {
+  color: #9A6A15 !important;
+}
+html.light .text-gold-light {
+  color: #85580A !important;
+}
+
 /* Maintain dark text on gold buttons and cards */
 html.light .text-cinema-950,
 html.light .text-\[\#0A0B0E\] {
   color: #08090C !important;
+}
+
+/* Elements that must always preserve crisp white and light text in light mode (e.g. movie posters, photo cards) */
+html.light .preserve-white,
+html.light .preserve-white h3,
+html.light .preserve-white h4,
+html.light .preserve-white p,
+html.light .preserve-white span,
+html.light .preserve-white a {
+  color: #FFFFFF !important;
+}
+
+html.light .preserve-white .text-gold {
+  color: #DFC087 !important;
+}
+
+html.light .preserve-white .text-cinema-200,
+html.light .preserve-white .text-cinema-300,
+html.light .preserve-white .text-cinema-400 {
+  color: #E2E8F0 !important;
+}
+
+html.light .preserve-white .bg-black\/75,
+html.light .preserve-white .bg-black\/60,
+html.light .preserve-white .bg-\[\#08090C\]\/80 {
+  background-color: rgba(8, 9, 12, 0.80) !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Clean styling for frosted glass buttons in light mode */
+html.light a.bg-white\/\[0\.04\],
+html.light button.bg-white\/\[0\.04\],
+html.light a.bg-white\/\[0\.05\],
+html.light button.bg-white\/\[0\.05\],
+html.light a.bg-white\/\[0\.06\],
+html.light button.bg-white\/\[0\.06\] {
+  background-color: #FFFFFF !important;
+  color: #0A0D14 !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.05) !important;
+}
+
+html.light a.bg-white\/\[0\.04\]:hover,
+html.light button.bg-white\/\[0\.04\]:hover,
+html.light a.bg-white\/\[0\.05\]:hover,
+html.light button.bg-white\/\[0\.05\]:hover {
+  background-color: #F1F4F9 !important;
+  border-color: #D4AF37 !important;
 }
 
 /* Form inputs in light mode */

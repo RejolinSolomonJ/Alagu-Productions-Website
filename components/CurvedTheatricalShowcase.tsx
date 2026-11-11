@@ -169,7 +169,7 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
                 }`}
               >
                 {/* Movie Card Poster Presentation */}
-                <div className="relative w-full h-full rounded-2xl overflow-hidden bg-cinema-950 border border-white/20 flex flex-col justify-between shadow-2xl">
+                <div className="preserve-white relative w-full h-full rounded-2xl overflow-hidden bg-cinema-950 border border-white/20 flex flex-col justify-between shadow-2xl">
                   {/* Thematic Movie Poster Background */}
                   <Image
                     src={posterSrc}

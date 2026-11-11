@@ -16,6 +16,7 @@
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   body {
@@ -25,6 +26,7 @@
     position: relative;
     min-height: 100vh;
     letter-spacing: -0.015em;
+    transition: background-color 0.3s ease, color 0.3s ease;
   }
 
   ::selection {
@@ -41,6 +43,141 @@
     color: #FFFFFF;
     letter-spacing: -0.025em;
   }
+}
+
+/* ==========================================================================
+   Light Mode Luxury Platinum Theme
+   ========================================================================== */
+html.light {
+  color-scheme: light;
+  background-color: #F8F9FD !important;
+  color: #1E2433 !important;
+}
+
+html.light body {
+  background-color: #F8F9FD !important;
+  color: #333C4E !important;
+}
+
+html.light ::selection {
+  background-color: #D4AF37;
+  color: #08090C;
+}
+
+html.light ::-webkit-scrollbar-track {
+  background: #F1F4F9;
+}
+
+html.light ::-webkit-scrollbar-thumb {
+  background: #CBD5E1;
+}
+
+html.light ::-webkit-scrollbar-thumb:hover {
+  background: #D4AF37;
+}
+
+/* Headings in light mode */
+html.light h1,
+html.light h2,
+html.light h3,
+html.light h4,
+html.light h5,
+html.light h6 {
+  color: #0A0D14 !important;
+}
+
+/* Background overrides in light mode */
+html.light .bg-\[\#08090C\],
+html.light .bg-cinema-950 {
+  background-color: #F8F9FD !important;
+}
+
+html.light .bg-cinema-900 {
+  background-color: #FFFFFF !important;
+}
+
+html.light .bg-cinema-850,
+html.light .bg-cinema-800 {
+  background-color: #EDF1F7 !important;
+}
+
+/* Frosted glass cards in light mode */
+html.light .bg-white\/\[0\.03\],
+html.light .bg-white\/\[0\.02\],
+html.light .bg-white\/\[0\.04\],
+html.light .bg-white\/\[0\.05\] {
+  background-color: rgba(255, 255, 255, 0.88) !important;
+  box-shadow: 0 15px 35px rgba(15, 23, 42, 0.05), 0 1px 3px rgba(15, 23, 42, 0.04) !important;
+}
+
+html.light .border-white\/10,
+html.light .border-white\/5,
+html.light .border-white\/15,
+html.light .border-cinema-800,
+html.light .border-cinema-700 {
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Typography in light mode */
+html.light .text-white {
+  color: #0A0D14 !important;
+}
+
+html.light .text-cinema-200 {
+  color: #1E293B !important;
+}
+
+html.light .text-cinema-300 {
+  color: #334155 !important;
+}
+
+html.light .text-cinema-400 {
+  color: #64748B !important;
+}
+
+/* Maintain dark text on gold buttons and cards */
+html.light .text-cinema-950,
+html.light .text-\[\#0A0B0E\] {
+  color: #08090C !important;
+}
+
+/* Form inputs in light mode */
+html.light input:not([type="checkbox"]):not([type="radio"]),
+html.light textarea,
+html.light select {
+  background-color: #FFFFFF !important;
+  color: #0A0D14 !important;
+  border-color: rgba(15, 23, 42, 0.12) !important;
+}
+
+html.light input::placeholder,
+html.light textarea::placeholder {
+  color: #94A3B8 !important;
+}
+
+/* Nav header in light mode */
+html.light header {
+  background-color: rgba(248, 249, 253, 0.85) !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Footer in light mode */
+html.light footer {
+  background-color: #F1F4F9 !important;
+  border-color: rgba(15, 23, 42, 0.08) !important;
+}
+
+/* Mobile menu in light mode */
+html.light .bg-black\/70 {
+  background-color: rgba(248, 249, 253, 0.95) !important;
+}
+
+/* Floating badge inside bento box 3 */
+html.light .bg-\[\#08090C\]\/80,
+html.light .bg-\[\#08090C\]\/85,
+html.light .bg-\[\#08090C\]\/90 {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  border-color: #D4AF37 !important;
 }
 
 /* Authentic matte film texture */

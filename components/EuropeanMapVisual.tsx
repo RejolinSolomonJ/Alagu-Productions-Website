@@ -42,7 +42,7 @@ export function EuropeanMapVisual() {
             <Sparkles className="w-3.5 h-3.5" />
             <span>Active Theatrical Network</span>
           </div>
-          <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
+          <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
             European Distribution &amp; Exhibition Corridors
           </h3>
           <p className="text-sm text-cinema-300 mt-1 max-w-xl leading-relaxed">

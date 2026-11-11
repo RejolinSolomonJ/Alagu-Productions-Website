@@ -61,7 +61,7 @@ export default function PortfolioPage() {
             <span>Theatrical Footprint</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Our Successful Distribution &amp; Exhibition Projects
           </h1>
 
@@ -170,7 +170,7 @@ export default function PortfolioPage() {
         {filteredProjects.length === 0 ? (
           <div className="mt-16 text-center py-16 px-4 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl">
             <Building2 className="w-12 h-12 text-gold mx-auto mb-3 opacity-50" />
-            <h3 className="font-serif text-xl font-bold text-white">No Projects Found</h3>
+            <h3 className="font-sans text-xl font-bold text-white tracking-tight">No Projects Found</h3>
             <p className="text-sm text-cinema-400 mt-1 max-w-sm mx-auto">
               No exhibition records match your chosen filter combination.
             </p>
@@ -210,7 +210,7 @@ export default function PortfolioPage() {
                     </span>
                   </div>
 
-                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-2 tracking-tight group-hover:text-gold-light transition-colors">
+                  <h3 className="font-sans text-xl sm:text-2xl font-extrabold text-white mb-2 tracking-tight group-hover:text-gold-light transition-colors">
                     {project.filmTitle} &ndash; {project.city}
                   </h3>
 
@@ -256,7 +256,7 @@ export default function PortfolioPage() {
               <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>Exhibitor Feedback</span>
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-white tracking-tight mt-2">
+            <h2 className="font-sans text-3xl sm:text-4xl font-extrabold text-white tracking-tight mt-2">
               Cinema Operator Experiences
             </h2>
           </div>

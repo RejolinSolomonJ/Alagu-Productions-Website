@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { Logo } from './Logo';
+import { ThemeToggle } from './ThemeToggle';
 import { Menu, X, ArrowUpRight } from 'lucide-react';
 
 const NAV_LINKS = [
@@ -42,7 +43,7 @@ export function Header() {
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between gap-6">
+          <div className="flex items-center justify-between gap-4 sm:gap-6">
             {/* Logo */}
             <div className="flex-shrink-0 flex items-center">
               <Logo size={isScrolled ? 'sm' : 'md'} showTagline={!isScrolled} />
@@ -68,28 +69,34 @@ export function Header() {
               })}
             </nav>
 
-            {/* Partner CTA Button: Brushed Champagne Gold */}
-            <div className="hidden sm:flex items-center gap-3">
-              <Link
-                href="/partner"
-                className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs xl:text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.98] transition-all duration-200"
-              >
-                <span>Partner With Us</span>
-                <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
-              </Link>
-            </div>
+            {/* Action Buttons: Theme Toggle + Partner CTA */}
+            <div className="flex items-center gap-2.5 sm:gap-3">
+              {/* Theme Toggle Button */}
+              <ThemeToggle />
 
-            {/* Mobile Menu Button */}
-            <div className="flex lg:hidden items-center">
-              <button
-                type="button"
-                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="p-2 rounded-xl text-cinema-300 hover:text-white bg-white/[0.05] border border-white/10 backdrop-blur-md transition-colors"
-                aria-expanded={isMobileMenuOpen}
-                aria-label="Toggle navigation menu"
-              >
-                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-              </button>
+              {/* Partner CTA Button: Brushed Champagne Gold */}
+              <div className="hidden sm:flex items-center">
+                <Link
+                  href="/partner"
+                  className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs xl:text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.98] transition-all duration-200"
+                >
+                  <span>Partner With Us</span>
+                  <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
+                </Link>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <div className="flex lg:hidden items-center">
+                <button
+                  type="button"
+                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  className="p-2 rounded-xl text-cinema-300 hover:text-white bg-white/[0.05] border border-white/10 backdrop-blur-md transition-colors"
+                  aria-expanded={isMobileMenuOpen}
+                  aria-label="Toggle navigation menu"
+                >
+                  {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -121,6 +128,11 @@ export function Header() {
           </nav>
 
           <div className="pt-6 border-t border-white/10 space-y-3" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between px-2 py-1">
+              <span className="text-xs uppercase font-mono tracking-wider text-cinema-400">Appearance</span>
+              <ThemeToggle />
+            </div>
+
             <Link
               href="/partner"
               className="w-full py-3.5 px-6 rounded-2xl text-center text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle flex items-center justify-center gap-2"

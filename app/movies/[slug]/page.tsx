@@ -154,7 +154,7 @@ export default function MovieDetailPage({ params }: Props) {
               </div>
 
               <div>
-                <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+                <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                   {movie.title}
                 </h2>
                 <p className="text-xs text-gold uppercase tracking-widest mt-2 font-semibold font-mono">

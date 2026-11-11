@@ -226,7 +226,7 @@ export default function AdminPage() {
           </div>
 
           <div className="space-y-1.5">
-            <h1 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide">
+            <h1 className="font-sans text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               CMS Admin Portal
             </h1>
             <p className="text-xs text-cinema-400">
@@ -384,7 +384,7 @@ export default function AdminPage() {
           <div className="mt-8 space-y-6">
             <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-white">
+                <h2 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                   Exhibition &amp; Theatrical Booking Enquiries
                 </h2>
                 <p className="text-xs text-cinema-400 mt-1">
@@ -415,7 +415,7 @@ export default function AdminPage() {
                   >
                     <div className="space-y-2.5 flex-1">
                       <div className="flex flex-wrap items-center gap-2">
-                        <span className="font-serif font-bold text-lg text-white">
+                        <span className="font-sans font-bold text-lg text-white">
                           {enq.cinemaName}
                         </span>
                         <span className="text-xs text-gold font-medium bg-gold/10 px-2.5 py-0.5 rounded-full border border-gold/20">
@@ -478,7 +478,7 @@ export default function AdminPage() {
           <div className="mt-8 space-y-6">
             <div className="flex items-center justify-between">
               <div>
-                <h2 className="font-serif text-2xl font-bold text-white">
+                <h2 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                   Movies Catalogue ({movies.length} Titles)
                 </h2>
                 <p className="text-xs text-cinema-400 mt-1">
@@ -510,7 +510,7 @@ export default function AdminPage() {
                       <span className="text-xs font-mono text-cinema-400">{movie.releaseYear}</span>
                     </div>
 
-                    <h3 className="font-serif text-xl font-bold text-white">{movie.title}</h3>
+                    <h3 className="font-sans text-xl font-bold text-white tracking-tight">{movie.title}</h3>
                     <p className="text-xs text-cinema-400 mt-1">
                       Languages: {movie.languages.join(', ')}
                     </p>
@@ -554,7 +554,7 @@ export default function AdminPage() {
         {activeTab === 'projects' && (
           <div className="mt-8 space-y-6">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-white">
+              <h2 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                 Exhibition Projects ({projects.length})
               </h2>
               <p className="text-xs text-cinema-400 mt-1">
@@ -566,7 +566,7 @@ export default function AdminPage() {
               {projects.map((p) => (
                 <div key={p.id} className="p-6 rounded-2xl bg-cinema-900 border border-cinema-750 space-y-3 shadow-md">
                   <div className="flex items-center justify-between">
-                    <span className="font-serif font-bold text-lg text-white">{p.filmTitle}</span>
+                    <span className="font-sans font-bold text-lg text-white">{p.filmTitle}</span>
                     <span className="text-xs text-gold font-mono bg-gold/10 px-2 py-0.5 rounded border border-gold/20">
                       {p.country}
                     </span>
@@ -593,7 +593,7 @@ export default function AdminPage() {
         {activeTab === 'testimonials' && (
           <div className="mt-8 space-y-6">
             <div>
-              <h2 className="font-serif text-2xl font-bold text-white">
+              <h2 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                 Partner Testimonial Compliance
               </h2>
               <p className="text-xs text-cinema-400 mt-1">
@@ -643,7 +643,7 @@ export default function AdminPage() {
       {isAddMovieModalOpen && (
         <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
           <div className="w-full max-w-lg p-6 sm:p-8 rounded-3xl bg-cinema-900 border border-cinema-700 shadow-2xl space-y-5">
-            <h3 className="font-serif text-2xl font-bold text-white">Add Theatrical Movie</h3>
+            <h3 className="font-sans text-2xl font-extrabold text-white tracking-tight">Add Theatrical Movie</h3>
 
             <form onSubmit={handleCreateMovie} className="space-y-4 text-xs">
               <div>

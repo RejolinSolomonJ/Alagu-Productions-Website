@@ -82,7 +82,7 @@ export function MovieCard({ movie }: MovieCardProps) {
             <span className="text-cinema-400">{movie.genres[0]}</span>
           </div>
 
-          <h3 className="font-serif text-lg font-bold text-white tracking-tight leading-snug group-hover:text-gold-light transition-colors">
+          <h3 className="font-sans text-lg font-extrabold text-white tracking-tight leading-snug group-hover:text-gold-light transition-colors">
             {movie.title}
           </h3>
 

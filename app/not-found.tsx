@@ -14,7 +14,7 @@ export default function NotFound() {
           <div className="font-mono text-xs uppercase tracking-widest text-gold font-bold">
             Scene 404 &bull; Take 1 &bull; Cut!
           </div>
-          <h1 className="font-serif text-4xl sm:text-5xl font-black text-white">
+          <h1 className="font-sans text-4xl sm:text-5xl font-extrabold text-white tracking-tight">
             Reel Not Found
           </h1>
           <p className="text-sm text-cinema-300 leading-relaxed max-w-sm mx-auto">

@@ -108,7 +108,7 @@ export function ModernContactSection({
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
             <div className="relative z-10">
-              <h2 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold text-white tracking-tight">
+              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-extrabold text-white tracking-tight">
                 Get in Touch
               </h2>
 
@@ -206,7 +206,7 @@ export function ModernContactSection({
                 <div className="w-14 h-14 rounded-full bg-gold/15 border border-gold/30 text-gold flex items-center justify-center mx-auto shadow-gold-subtle">
                   <CheckCircle2 className="w-7 h-7" />
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-white">
+                <h3 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                   Message Dispatched
                 </h3>
                 <p className="text-cinema-300 text-sm max-w-sm mx-auto leading-relaxed">

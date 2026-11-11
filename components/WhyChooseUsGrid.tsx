@@ -98,7 +98,7 @@ export function WhyChooseUsGrid() {
                 <div className="text-[11px] uppercase tracking-widest text-gold font-semibold mb-1.5 font-sans">
                   {pillar.short}
                 </div>
-                <h3 className="font-serif text-2xl font-bold text-white tracking-tight">
+                <h3 className="font-sans text-2xl font-extrabold text-white tracking-tight">
                   {pillar.title}
                 </h3>
                 {pillar.highlightNote && (

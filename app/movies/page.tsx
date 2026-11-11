@@ -64,7 +64,7 @@ export default function MoviesPage() {
             <span>Theatrical Catalogue &bull; 16 Titles</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Theatrical Slate &amp; Exhibition Rights
           </h1>
 
@@ -146,7 +146,7 @@ export default function MoviesPage() {
         {filteredMovies.length === 0 ? (
           <div className="mt-16 text-center py-16 px-4 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl">
             <Film className="w-12 h-12 text-gold mx-auto mb-3 opacity-50" />
-            <h3 className="font-serif text-xl font-bold text-white">No Films Found</h3>
+            <h3 className="font-sans text-xl font-bold text-white tracking-tight">No Films Found</h3>
             <p className="text-sm text-cinema-400 mt-1 max-w-sm mx-auto">
               No titles match your current search or filter criteria. Try clearing filters or searching for another keyword.
             </p>
@@ -174,7 +174,7 @@ export default function MoviesPage() {
         <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 text-center relative overflow-hidden shadow-2xl">
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent pointer-events-none" />
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
+            <h3 className="font-sans text-2xl sm:text-3xl font-bold text-white tracking-tight">
               Screen These Titles in Your Theatre
             </h3>
             <p className="text-cinema-300 text-sm sm:text-base leading-relaxed">

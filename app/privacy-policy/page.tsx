@@ -26,7 +26,7 @@ export default function PrivacyPolicyPage() {
               <ShieldCheck className="w-6 h-6" />
             </div>
             <div>
-              <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+              <h1 className="font-sans text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
                 Privacy Policy
               </h1>
               <p className="text-xs text-cinema-400 mt-1">

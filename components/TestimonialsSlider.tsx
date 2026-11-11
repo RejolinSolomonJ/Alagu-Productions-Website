@@ -15,7 +15,7 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
     return (
       <div className="rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 text-center text-cinema-400 shadow-2xl">
         <Info className="w-8 h-8 mx-auto mb-2 text-gold opacity-60" />
-        <p className="font-serif text-lg text-white">Exhibitor Testimonials</p>
+        <p className="font-sans text-lg font-bold text-white tracking-tight">Exhibitor Testimonials</p>
         <p className="text-xs mt-1">
           Partner feedback submissions are currently undergoing compliance review in the CMS.
         </p>
@@ -61,7 +61,7 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
 
       {/* Quote Display */}
       <div className="relative z-10 py-3 min-h-[120px] flex flex-col justify-center">
-        <p className="font-serif text-lg sm:text-xl md:text-2xl text-white italic leading-relaxed">
+        <p className="font-sans text-lg sm:text-xl md:text-2xl text-white font-medium italic leading-relaxed">
           &ldquo;{current.quote}&rdquo;
         </p>
       </div>
@@ -69,11 +69,11 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
       {/* Author and Navigation */}
       <div className="relative z-10 mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
         <div>
-          <h4 className="font-serif text-base font-bold text-white">
+          <h4 className="font-sans text-base font-bold text-white tracking-tight">
             {current.author}
           </h4>
           <p className="text-xs text-cinema-400 font-sans">
-            {current.role} &bull; <span className="text-cinema-300">{current.cinemaName}</span> ({current.location})
+            {current.role} &bull; <span className="text-cinema-300">{current.organization}</span> ({current.city}, {current.country})
           </p>
         </div>
 

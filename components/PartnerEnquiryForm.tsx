@@ -171,7 +171,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
           <Sparkles className="w-3.5 h-3.5 text-gold" />
           <span>Exhibition Partnerships</span>
         </div>
-        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
+        <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight leading-tight">
           Interested in Exhibiting Indian Films in Your City?
         </h2>
         <p className="text-cinema-300 text-sm sm:text-base mt-3 leading-relaxed">
@@ -205,7 +205,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
           <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto text-emerald-400">
             <CheckCircle2 className="w-8 h-8" />
           </div>
-          <h3 className="font-serif text-2xl font-bold text-white">Enquiry Received</h3>
+          <h3 className="font-sans text-2xl font-extrabold text-white tracking-tight">Enquiry Received</h3>
           <p className="text-cinema-300 text-sm max-w-md mx-auto leading-relaxed">
             Thank you, <strong className="text-white">{contactName}</strong>. Our European distribution team will review your requirements for <strong className="text-white">{cinemaName}</strong> and reply within 24 hours.
           </p>

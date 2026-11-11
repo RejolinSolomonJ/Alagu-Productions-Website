@@ -23,7 +23,7 @@ export default function ContactPage() {
             <span>Distribution Liaison</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Contact Alagu Production
           </h1>
 

@@ -34,7 +34,7 @@ export default function AboutPage() {
             <span>Corporate Profile &bull; Partner of MADSOULS PRODUCTION LLC</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
             Dedicated to Bringing the Best of Indian Cinema to European Audiences
           </h1>
 
@@ -58,7 +58,7 @@ export default function AboutPage() {
                 <span>Our Story &amp; Purpose</span>
               </div>
 
-              <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight">
+              <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight">
                 Pioneering Strategic Indian Film Exhibition Across Europe
               </h2>
 
@@ -93,7 +93,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <Target className="w-5 h-5 text-gold" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Our Mission</h3>
+                <h3 className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight">Our Mission</h3>
                 <p className="text-sm text-cinema-300 leading-relaxed">
                   To expand the theatrical horizon of Indian cinema across European territory by delivering premiere day-and-date theatrical releases, upholding rigorous DCI digital cinema standards, and supporting local exhibitors.
                 </p>
@@ -109,7 +109,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <Users className="w-5 h-5 text-gold" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">Exhibitor-First Approach</h3>
+                <h3 className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight">Exhibitor-First Approach</h3>
                 <p className="text-sm text-cinema-300 leading-relaxed">
                   We view cinema owners not merely as venues, but as vital co-hosts. Our transparent terms, prompt KDM management, and promotional assistance empower operators to maximize screen profitability.
                 </p>
@@ -125,7 +125,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <ShieldCheck className="w-5 h-5 text-gold" />
                 </div>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-white">DCI &amp; Operational Rigor</h3>
+                <h3 className="font-sans text-xl sm:text-2xl font-bold text-white tracking-tight">DCI &amp; Operational Rigor</h3>
                 <p className="text-sm text-cinema-300 leading-relaxed">
                   Every title is delivered in certified 2K / 4K Scope formats with Dolby Atmos &amp; 5.1/7.1 sound mastering, paired with encrypted Key Delivery Messages (KDM) timed precisely for zero opening-night downtime.
                 </p>
@@ -145,7 +145,7 @@ export default function AboutPage() {
             <span className="text-xs sm:text-sm font-semibold text-gold tracking-widest uppercase font-sans inline-block mb-2">
               Pan-European Theatrical Reach
             </span>
-            <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+            <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
               Active Theatrical Circuits Across Europe
             </h2>
             <p className="text-cinema-300 text-sm sm:text-base mt-3 leading-relaxed">
@@ -169,7 +169,7 @@ export default function AboutPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[300px] bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
 
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-6 relative z-10">
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
+          <h2 className="font-sans text-3xl sm:text-4xl md:text-5xl font-extrabold text-white tracking-tight leading-tight">
             Ready to Exhibit Indian Blockbusters in Your City?
           </h2>
           <p className="text-cinema-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">

@@ -25,7 +25,7 @@ export default function WhyChooseUsPage() {
             <span>Exhibition Excellence</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight max-w-4xl mx-auto leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight max-w-4xl mx-auto leading-tight">
             Why Partner With Alagu Production?
           </h1>
 
@@ -50,7 +50,7 @@ export default function WhyChooseUsPage() {
               <Sparkles className="w-3.5 h-3.5 text-gold" />
               <span>Measurable Performance</span>
             </span>
-            <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight mt-2">
+            <h2 className="font-sans text-2xl sm:text-3xl md:text-4xl font-extrabold text-white tracking-tight mt-2">
               Distribution &amp; Exhibition Footprint
             </h2>
           </div>
@@ -68,7 +68,7 @@ export default function WhyChooseUsPage() {
               <ShieldCheck className="w-7 h-7 text-gold" />
             </div>
 
-            <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
+            <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
               Direct Cinema Partnership Model
             </h3>
 

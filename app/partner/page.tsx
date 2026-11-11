@@ -28,7 +28,7 @@ function PartnerContent() {
             <span>Exhibition Partnership Programme</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
+          <h1 className="font-sans text-3xl sm:text-5xl md:text-6xl font-extrabold text-white tracking-tight leading-tight">
             Partner With Alagu Production
           </h1>
 
@@ -53,7 +53,7 @@ function PartnerContent() {
                   <span>Exhibitor Value Proposition</span>
                 </div>
 
-                <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white tracking-tight">
+                <h2 className="font-sans text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
                   Exhibitor Partnership Benefits
                 </h2>
 

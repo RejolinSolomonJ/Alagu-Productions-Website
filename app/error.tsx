@@ -26,7 +26,7 @@ export default function ErrorPage({
           <span className="font-mono text-xs uppercase tracking-widest text-gold">
             Technical Projection Glitch
           </span>
-          <h1 className="font-serif text-3xl sm:text-4xl font-bold text-white">
+          <h1 className="font-sans text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Projection Interrupted
           </h1>
           <p className="text-xs sm:text-sm text-cinema-300 leading-relaxed max-w-sm mx-auto">

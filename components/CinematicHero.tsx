@@ -75,7 +75,7 @@ export function CinematicHero({
   return (
     <section
       ref={containerRef}
-      className="relative min-h-[92vh] sm:min-h-screen w-full flex items-center justify-center pt-28 sm:pt-32 pb-20 overflow-hidden bg-cinema-950"
+      className="relative min-h-[92vh] sm:min-h-screen w-full flex items-center justify-center pt-28 sm:pt-32 pb-20 overflow-hidden bg-[#08090C]"
       aria-label="Hero Section"
     >
       {/* Background Video Layer */}
@@ -95,16 +95,19 @@ export function CinematicHero({
       </div>
 
       {/* Modern, Balanced Dark Scrim: Deep enough for clean text contrast without muddying video */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/75 via-cinema-950/50 to-cinema-950 pointer-events-none" />
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/80 via-[#08090C]/65 to-[#08090C] pointer-events-none" />
 
       {/* Subtle edge vignette */}
-      <div className="absolute inset-0 z-10 [background:radial-gradient(ellipse_at_center,transparent_45%,rgba(5,6,8,0.7)_85%,#050608_100%)] pointer-events-none" />
+      <div className="absolute inset-0 z-10 [background:radial-gradient(ellipse_at_center,transparent_40%,rgba(8,9,12,0.85)_80%,#08090C_100%)] pointer-events-none" />
+
+      {/* Ambient Color Orb behind Hero */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[650px] h-[350px] bg-gold/10 rounded-full blur-[140px] pointer-events-none z-10" />
 
       {/* Hero Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center">
-        {/* Subtitle Pill Badge */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-cinema-900/90 border border-white/10 text-cinema-300 text-xs font-medium tracking-wide mb-6 backdrop-blur-md">
-          <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+        {/* Subtitle Pill Badge (Frosted Glass) */}
+        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-xl border border-white/15 text-cinema-200 text-xs font-medium tracking-wide mb-6 shadow-sm">
+          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
           <span className="font-mono text-[11px] uppercase tracking-wider">{badgeText}</span>
         </div>
 
@@ -126,33 +129,33 @@ export function CinematicHero({
           {subtext}
         </p>
 
-        {/* Key Metrics / Format Box */}
+        {/* Key Metrics / Format Box (Frosted Glass Clapperboard) */}
         <div className="mt-6 sm:mt-8 w-full max-w-2xl">
           <ClapperboardBanner />
         </div>
 
-        {/* Action Buttons */}
+        {/* Action Buttons (Frosted Glass & Brushed Gold Pills) */}
         <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-3.5 w-full sm:w-auto">
           <Link
             href={primaryCtaHref}
-            className="w-full sm:w-auto px-8 py-3.5 rounded-lg text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.99] transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-8 py-3.5 rounded-full text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.99] transition-all flex items-center justify-center gap-2 group/cta"
           >
             <Film className="w-4 h-4 text-cinema-950" />
             <span>{primaryCtaText}</span>
-            <ArrowRight className="w-4 h-4 text-cinema-950" />
+            <ArrowRight className="w-4 h-4 text-cinema-950 transform group-hover/cta:translate-x-0.5 transition-transform" />
           </Link>
 
           <Link
             href={secondaryCtaHref}
-            className="w-full sm:w-auto px-7 py-3.5 rounded-lg text-sm font-medium text-cinema-200 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] border border-white/10 hover:border-gold/30 transition-all flex items-center justify-center gap-2"
+            className="w-full sm:w-auto px-7 py-3.5 rounded-full text-sm font-medium text-cinema-200 hover:text-white bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-xl border border-white/15 hover:border-gold/40 shadow-sm transition-all flex items-center justify-center gap-2"
           >
             <PlayCircle className="w-4 h-4 text-gold" />
             <span>{secondaryCtaText}</span>
           </Link>
         </div>
 
-        {/* Technical Standard Badges */}
-        <div className="mt-8 pt-6 border-t border-cinema-800/80 flex flex-wrap items-center justify-center gap-6 text-xs text-cinema-400 font-mono">
+        {/* Technical Standard Badges (Frosted Glass Ribbon) */}
+        <div className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-cinema-300 font-mono shadow-sm">
           <span className="flex items-center gap-2">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
             DCI 2K &amp; 4K Scope
@@ -168,15 +171,15 @@ export function CinematicHero({
         </div>
       </div>
 
-      {/* Video Pause/Play Control */}
+      {/* Video Pause/Play Control (Frosted Glass) */}
       <button
         type="button"
         onClick={togglePlay}
-        className="absolute bottom-6 right-6 z-20 p-2 rounded-md bg-cinema-950/80 hover:bg-cinema-900 text-cinema-400 hover:text-cinema-200 border border-cinema-800 transition-colors text-xs flex items-center gap-1.5"
+        className="absolute bottom-6 right-6 z-20 p-2.5 rounded-full bg-white/[0.05] hover:bg-white/[0.10] backdrop-blur-xl text-cinema-300 hover:text-white border border-white/15 transition-all text-xs flex items-center gap-1.5 shadow-lg"
         aria-label={isPlaying ? 'Pause background video' : 'Play background video'}
       >
         {isPlaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
-        <span className="hidden sm:inline text-[11px] font-mono">
+        <span className="hidden sm:inline text-[11px] font-mono pr-1">
           {isPlaying ? 'Pause Video' : 'Play Video'}
         </span>
       </button>
@@ -185,7 +188,7 @@ export function CinematicHero({
       <button
         type="button"
         onClick={scrollToNext}
-        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-cinema-500 hover:text-cinema-300 transition-colors p-2"
+        className="absolute bottom-6 left-1/2 -translate-x-1/2 z-20 text-cinema-400 hover:text-white transition-colors p-2"
         aria-label="Scroll down to movies"
       >
         <ChevronDown className="w-5 h-5 animate-bounce" />

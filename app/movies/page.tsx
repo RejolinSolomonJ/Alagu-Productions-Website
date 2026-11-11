@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { INITIAL_MOVIES } from '@/lib/data/movies';
 import { MovieCard } from '@/components/MovieCard';
 import { MovieStatus } from '@/lib/types';
-import { Film, Search, ArrowRight } from 'lucide-react';
+import { Film, Search, ArrowRight, Sparkles } from 'lucide-react';
 
 const STATUS_TABS: Array<'All' | MovieStatus> = [
   'All',
@@ -52,16 +52,19 @@ export default function MoviesPage() {
   }, [selectedStatus, selectedLanguage, searchQuery]);
 
   return (
-    <div className="pt-24 pb-20 min-h-screen bg-cinema-950">
+    <div className="pt-24 pb-20 min-h-screen bg-[#08090C]">
       {/* Header Banner */}
-      <section className="relative py-14 border-b border-white/10 bg-cinema-900/60 overflow-hidden">
+      <section className="relative py-16 sm:py-20 border-b border-white/10 overflow-hidden">
+        {/* Subtle Ambient Glow */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
+
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10 text-gold text-xs font-semibold uppercase tracking-wider mb-3">
+          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-xl border border-white/10 text-gold text-xs font-semibold uppercase tracking-wider mb-4 shadow-sm">
             <Film className="w-3.5 h-3.5" />
             <span>Theatrical Catalogue &bull; 16 Titles</span>
           </div>
 
-          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight">
+          <h1 className="font-serif text-3xl sm:text-5xl md:text-6xl font-bold text-white tracking-tight leading-tight">
             Theatrical Slate &amp; Exhibition Rights
           </h1>
 
@@ -71,20 +74,23 @@ export default function MoviesPage() {
         </div>
       </section>
 
-      {/* Filter and Search Bar */}
+      {/* Filter and Search Bar (Frosted Glass Container) */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10">
-        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 p-4 rounded-lg bg-cinema-900 border border-white/10 shadow-card-clean">
-          {/* Status Tabs */}
-          <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-col lg:flex-row items-stretch lg:items-center justify-between gap-4 p-4 sm:p-5 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl relative overflow-hidden">
+          {/* Top Specular Sheen */}
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
+          {/* Status Tabs (Frosted Glass Pills) */}
+          <div className="flex flex-wrap items-center gap-2 relative z-10">
             {STATUS_TABS.map((tab) => (
               <button
                 key={tab}
                 type="button"
                 onClick={() => setSelectedStatus(tab)}
-                className={`px-4 py-2 rounded text-xs sm:text-sm font-semibold transition-colors duration-150 cursor-pointer ${
+                className={`px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-200 cursor-pointer ${
                   selectedStatus === tab
-                    ? 'bg-gold text-cinema-950 font-bold'
-                    : 'bg-cinema-950 text-cinema-300 hover:text-white hover:bg-white/[0.05] border border-white/10'
+                    ? 'bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] text-cinema-950 shadow-gold-subtle'
+                    : 'bg-white/[0.04] text-cinema-300 hover:text-white hover:bg-white/[0.08] border border-white/10'
                 }`}
               >
                 {tab}
@@ -93,17 +99,17 @@ export default function MoviesPage() {
           </div>
 
           {/* Search & Language Dropdown */}
-          <div className="flex flex-col sm:flex-row items-center gap-3">
+          <div className="flex flex-col sm:flex-row items-center gap-3 relative z-10">
             {/* Language filter */}
             <div className="relative w-full sm:w-auto">
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="w-full sm:w-auto px-4 py-2 rounded bg-cinema-950 border border-white/10 text-white text-xs sm:text-sm focus:border-gold focus:outline-none cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:outline-none cursor-pointer"
                 aria-label="Filter by language"
               >
                 {allLanguages.map((lang) => (
-                  <option key={lang} value={lang} className="bg-cinema-900 text-white">
+                  <option key={lang} value={lang} className="bg-[#08090C] text-white">
                     {lang === 'All' ? 'All Languages' : lang}
                   </option>
                 ))}
@@ -112,33 +118,33 @@ export default function MoviesPage() {
 
             {/* Search box */}
             <div className="relative w-full sm:w-72">
-              <Search className="w-4 h-4 text-cinema-400 absolute left-3.5 top-1/2 -translate-y-1/2 pointer-events-none" />
+              <Search className="w-4 h-4 text-cinema-400 absolute left-4 top-1/2 -translate-y-1/2 pointer-events-none" />
               <input
                 type="text"
                 placeholder="Search film, cast, director..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-10 pr-4 py-2 rounded bg-cinema-950 border border-white/10 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-400"
+                className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:outline-none placeholder:text-cinema-400 shadow-inner"
               />
             </div>
           </div>
         </div>
 
         {/* Results Counter & Compliance Note */}
-        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-4 px-1 text-xs text-cinema-400">
+        <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mt-4 px-2 text-xs text-cinema-400">
           <div>
             Showing <strong className="text-white">{filteredMovies.length}</strong> theatrical titles
             {selectedStatus !== 'All' && ` in "${selectedStatus}"`}
             {selectedLanguage !== 'All' && ` (${selectedLanguage})`}
           </div>
-          <div className="text-[11px] text-cinema-500 font-sans">
+          <div className="text-[11px] text-cinema-400 font-mono">
             DCI 2K/4K compliant &bull; Encrypted KDM keys delivered per server certificates
           </div>
         </div>
 
         {/* Movie Cards Grid */}
         {filteredMovies.length === 0 ? (
-          <div className="mt-16 text-center py-16 px-4 rounded-lg bg-cinema-900 border border-white/10">
+          <div className="mt-16 text-center py-16 px-4 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl">
             <Film className="w-12 h-12 text-gold mx-auto mb-3 opacity-50" />
             <h3 className="font-serif text-xl font-bold text-white">No Films Found</h3>
             <p className="text-sm text-cinema-400 mt-1 max-w-sm mx-auto">
@@ -151,7 +157,7 @@ export default function MoviesPage() {
                 setSelectedLanguage('All');
                 setSearchQuery('');
               }}
-              className="mt-4 px-4 py-2 rounded bg-gold text-cinema-950 font-semibold text-xs hover:bg-gold-light"
+              className="mt-5 px-6 py-2.5 rounded-full bg-gradient-to-r from-[#DFC087] to-[#D4AF37] text-cinema-950 font-semibold text-xs shadow-gold-subtle hover:brightness-110 transition-all"
             >
               Reset Filters
             </button>
@@ -164,19 +170,20 @@ export default function MoviesPage() {
           </div>
         )}
 
-        {/* Partner CTA Band */}
-        <div className="mt-20 p-8 sm:p-12 rounded-lg bg-cinema-900 border border-white/10 text-center relative overflow-hidden">
+        {/* Partner CTA Band (Frosted Glass Container) */}
+        <div className="mt-20 p-8 sm:p-12 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 text-center relative overflow-hidden shadow-2xl">
+          <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent pointer-events-none" />
           <div className="relative z-10 max-w-2xl mx-auto space-y-4">
             <h3 className="font-serif text-2xl sm:text-3xl font-bold text-white">
               Screen These Titles in Your Theatre
             </h3>
-            <p className="text-cinema-300 text-sm leading-relaxed">
+            <p className="text-cinema-300 text-sm sm:text-base leading-relaxed">
               Contact our theatrical acquisitions desk to verify territory availability, DCI delivery timelines, and box-office terms for your territory.
             </p>
-            <div className="pt-2">
+            <div className="pt-3">
               <Link
                 href="/partner"
-                className="inline-flex items-center gap-2 px-6 py-2.5 rounded font-semibold text-xs sm:text-sm text-cinema-950 bg-gold hover:bg-gold-light transition-colors"
+                className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full font-semibold text-xs sm:text-sm text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle transition-all"
               >
                 <span>Request Booking Terms</span>
                 <ArrowRight className="w-4 h-4" />

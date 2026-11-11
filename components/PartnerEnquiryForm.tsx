@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Send, CheckCircle2, AlertCircle, Phone, Mail, Loader2 } from 'lucide-react';
+import { Send, CheckCircle2, AlertCircle, Phone, Mail, Loader2, Sparkles } from 'lucide-react';
 
 const COUNTRIES = [
   { code: 'GB', name: 'United Kingdom', dial: '+44' },
@@ -76,29 +76,29 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
   const validate = (): boolean => {
     const newErrors: FormErrors = {};
 
-    if (!country) newErrors.country = 'Please select a territory.';
-    if (!city.trim()) newErrors.city = 'City is required.';
-    if (!cinemaName.trim()) newErrors.cinemaName = 'Venue name is required.';
-    if (!contactName.trim()) newErrors.contactName = 'Contact name is required.';
+    if (!country.trim()) newErrors.country = 'Country is required';
+    if (!city.trim()) newErrors.city = 'City is required';
+    if (!cinemaName.trim()) newErrors.cinemaName = 'Cinema / Theatre name is required';
+    if (!contactName.trim()) newErrors.contactName = 'Contact person name is required';
 
     if (!email.trim()) {
-      newErrors.email = 'Email address is required.';
+      newErrors.email = 'Email address is required';
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-      newErrors.email = 'Please provide a valid email address.';
+      newErrors.email = 'Please enter a valid email address';
     }
 
     if (!phoneNumber.trim()) {
-      newErrors.phoneNumber = 'Phone number is required.';
-    } else if (phoneNumber.replace(/\D/g, '').length < 6) {
-      newErrors.phoneNumber = 'Please enter a valid phone number.';
+      newErrors.phoneNumber = 'Phone number is required';
+    } else if (!/^\d[\d\s\-()]{5,}$/.test(phoneNumber)) {
+      newErrors.phoneNumber = 'Please enter a valid phone number';
     }
 
     if (!message.trim()) {
-      newErrors.message = 'Please provide details on your screening schedule or requirements.';
+      newErrors.message = 'Please provide details of your screening requirements';
     }
 
     if (!consent) {
-      newErrors.consent = 'Consent to the Privacy Policy is required.';
+      newErrors.consent = 'You must agree before submitting';
     }
 
     setErrors(newErrors);
@@ -107,16 +107,13 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!validate()) return;
 
     if (hpAddress) {
-      setIsSubmitting(true);
-      setTimeout(() => {
-        setIsSubmitting(false);
-        setSubmitStatus('success');
-      }, 500);
+      setSubmitStatus('success');
       return;
     }
+
+    if (!validate()) return;
 
     setIsSubmitting(true);
     setSubmitStatus('idle');
@@ -140,12 +137,21 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
         }),
       });
 
-      const data = await res.json();
       if (!res.ok) {
+        const data = await res.json().catch(() => ({}));
         throw new Error(data.error || 'Failed to submit enquiry.');
       }
 
       setSubmitStatus('success');
+      setCity('');
+      setCinemaName('');
+      setContactName('');
+      setPhoneNumber('');
+      setEmail('');
+      setSelectedFilm('');
+      setMessage('');
+      setConsent(false);
+      setErrors({});
     } catch (err: any) {
       setSubmitStatus('error');
       setErrorMessage(err.message || 'An error occurred while submitting.');
@@ -155,26 +161,30 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
   };
 
   return (
-    <div className={`w-full max-w-3xl mx-auto rounded-lg bg-cinema-900 border border-cinema-800 p-6 sm:p-8 shadow-card-clean ${className}`}>
+    <div className={`relative w-full max-w-3xl mx-auto rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-12 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300 ${className}`}>
+      {/* Top Specular Sheen */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
       {/* Header */}
-      <div className="mb-8">
-        <span className="text-xs uppercase font-mono tracking-wider text-gold font-semibold">
-          Exhibition Partnerships
-        </span>
-        <h2 className="font-serif text-2xl sm:text-3xl font-bold text-white mt-1">
+      <div className="mb-8 relative z-10">
+        <div className="inline-flex items-center gap-1.5 text-xs uppercase font-mono tracking-widest text-gold font-semibold mb-2">
+          <Sparkles className="w-3.5 h-3.5 text-gold" />
+          <span>Exhibition Partnerships</span>
+        </div>
+        <h2 className="font-serif text-2xl sm:text-3xl md:text-4xl font-bold text-white tracking-tight leading-tight">
           Interested in Exhibiting Indian Films in Your City?
         </h2>
-        <p className="text-cinema-400 text-sm mt-2 leading-relaxed">
+        <p className="text-cinema-300 text-sm sm:text-base mt-3 leading-relaxed">
           Are you a cinema owner, theatre operator or exhibition partner interested in screening Indian movies in your city or country? Partner with Alagu Production to bring the latest Indian movies to your audience.
         </p>
 
-        {/* Quick action buttons */}
+        {/* Quick action buttons (Frosted Glass Pills) */}
         <div className="mt-5 flex flex-wrap items-center gap-3">
           <a
             href="https://wa.me/995504887972"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs sm:text-sm font-semibold text-cinema-950 bg-emerald-500 hover:bg-emerald-400 transition-colors shadow-sm"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-semibold text-cinema-950 bg-emerald-400 hover:bg-emerald-300 transition-colors shadow-md"
           >
             <Phone className="w-4 h-4" />
             <span>WhatsApp: +995 504 88 79 72</span>
@@ -182,7 +192,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
 
           <a
             href="mailto:alaguproduction@gmail.com"
-            className="inline-flex items-center gap-2 px-4 py-2 rounded-md text-xs sm:text-sm font-medium text-cinema-300 hover:text-white bg-cinema-850 hover:bg-cinema-800 border border-cinema-750 transition-colors"
+            className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs sm:text-sm font-medium text-cinema-200 hover:text-white bg-white/[0.05] hover:bg-white/[0.10] border border-white/15 transition-colors shadow-sm"
           >
             <Mail className="w-4 h-4 text-gold" />
             <span>alaguproduction@gmail.com</span>
@@ -191,22 +201,24 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
       </div>
 
       {submitStatus === 'success' ? (
-        <div className="py-8 px-6 text-center space-y-3 rounded-lg bg-cinema-950 border border-emerald-500/30">
-          <CheckCircle2 className="w-10 h-10 text-emerald-400 mx-auto" />
-          <h3 className="font-serif text-xl font-bold text-white">Enquiry Received</h3>
-          <p className="text-cinema-300 text-sm max-w-md mx-auto">
+        <div className="py-12 px-6 text-center space-y-4 rounded-3xl bg-white/[0.04] backdrop-blur-xl border border-emerald-500/30 shadow-2xl relative z-10">
+          <div className="w-14 h-14 rounded-full bg-emerald-500/15 border border-emerald-500/30 flex items-center justify-center mx-auto text-emerald-400">
+            <CheckCircle2 className="w-8 h-8" />
+          </div>
+          <h3 className="font-serif text-2xl font-bold text-white">Enquiry Received</h3>
+          <p className="text-cinema-300 text-sm max-w-md mx-auto leading-relaxed">
             Thank you, <strong className="text-white">{contactName}</strong>. Our European distribution team will review your requirements for <strong className="text-white">{cinemaName}</strong> and reply within 24 hours.
           </p>
           <button
             type="button"
             onClick={() => setSubmitStatus('idle')}
-            className="mt-4 px-4 py-2 text-xs font-semibold text-cinema-400 hover:text-white"
+            className="mt-4 px-6 py-2.5 rounded-full text-xs font-semibold text-white bg-white/10 hover:bg-white/20 border border-white/15 transition-colors"
           >
             Submit another enquiry &rarr;
           </button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit} className="space-y-4" noValidate>
+        <form onSubmit={handleSubmit} className="space-y-4 relative z-10" noValidate>
           <div className="hidden" aria-hidden="true">
             <input
               type="text"
@@ -219,17 +231,17 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="country" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="country" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 Country / Territory <span className="text-gold">*</span>
               </label>
               <select
                 id="country"
                 value={country}
                 onChange={handleCountryChange}
-                className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all"
               >
                 {COUNTRIES.map((c) => (
-                  <option key={c.code} value={c.name} className="bg-cinema-900 text-white">
+                  <option key={c.code} value={c.name} className="bg-[#08090C] text-white">
                     {c.name} ({c.dial})
                   </option>
                 ))}
@@ -238,7 +250,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
             </div>
 
             <div>
-              <label htmlFor="city" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="city" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 City <span className="text-gold">*</span>
               </label>
               <input
@@ -247,7 +259,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="e.g. London, Frankfurt, Paris"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.city && <p className="text-xs text-rose-400 mt-1">{errors.city}</p>}
             </div>
@@ -255,7 +267,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="cinemaName" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="cinemaName" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 Cinema / Theatre Name <span className="text-gold">*</span>
               </label>
               <input
@@ -264,13 +276,13 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="e.g. Odeon Covent Garden"
                 value={cinemaName}
                 onChange={(e) => setCinemaName(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.cinemaName && <p className="text-xs text-rose-400 mt-1">{errors.cinemaName}</p>}
             </div>
 
             <div>
-              <label htmlFor="contactName" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="contactName" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 Contact Person Name <span className="text-gold">*</span>
               </label>
               <input
@@ -279,7 +291,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="Full name"
                 value={contactName}
                 onChange={(e) => setContactName(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.contactName && <p className="text-xs text-rose-400 mt-1">{errors.contactName}</p>}
             </div>
@@ -287,7 +299,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <div>
-              <label htmlFor="email" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="email" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 Email Address <span className="text-gold">*</span>
               </label>
               <input
@@ -296,13 +308,13 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="programmer@cinema.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.email && <p className="text-xs text-rose-400 mt-1">{errors.email}</p>}
             </div>
 
             <div>
-              <label htmlFor="phoneNumber" className="block text-xs font-medium text-cinema-300 mb-1">
+              <label htmlFor="phoneNumber" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
                 Phone / WhatsApp <span className="text-gold">*</span>
               </label>
               <div className="flex gap-2">
@@ -311,7 +323,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                   aria-label="Dial code"
                   value={phoneCountryCode}
                   onChange={(e) => setPhoneCountryCode(e.target.value)}
-                  className="w-16 px-2 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm text-center focus:border-gold focus:outline-none"
+                  className="w-20 px-3 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm text-center focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all shadow-inner"
                 />
                 <input
                   type="tel"
@@ -319,7 +331,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                   placeholder="Number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="flex-1 px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+                  className="flex-1 px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
                 />
               </div>
               {errors.phoneNumber && <p className="text-xs text-rose-400 mt-1">{errors.phoneNumber}</p>}
@@ -327,7 +339,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
           </div>
 
           <div>
-            <label htmlFor="selectedFilm" className="block text-xs font-medium text-cinema-300 mb-1">
+            <label htmlFor="selectedFilm" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
               Film of Interest (Optional)
             </label>
             <input
@@ -336,12 +348,12 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
               placeholder="e.g. Jailer 2, Thug Life, or General Upcoming Slate"
               value={selectedFilm}
               onChange={(e) => setSelectedFilm(e.target.value)}
-              className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+              className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
             />
           </div>
 
           <div>
-            <label htmlFor="message" className="block text-xs font-medium text-cinema-300 mb-1">
+            <label htmlFor="message" className="block text-xs font-medium text-cinema-300 mb-1.5 font-sans">
               Screening Requirements &amp; Dates <span className="text-gold">*</span>
             </label>
             <textarea
@@ -350,7 +362,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
               placeholder="Target screening dates, number of shows, screen capacity..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full px-3 py-2.5 rounded-md bg-cinema-950 border border-cinema-800 text-white text-xs sm:text-sm focus:border-gold focus:outline-none placeholder:text-cinema-600"
+              className="w-full p-4 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all resize-none shadow-inner"
             />
             {errors.message && <p className="text-xs text-rose-400 mt-1">{errors.message}</p>}
           </div>
@@ -361,7 +373,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 type="checkbox"
                 checked={consent}
                 onChange={(e) => setConsent(e.target.checked)}
-                className="mt-0.5 w-4 h-4 rounded border-cinema-700 bg-cinema-950 text-gold focus:ring-gold"
+                className="mt-0.5 w-4 h-4 rounded border-white/20 bg-white/5 text-gold focus:ring-gold"
               />
               <span className="text-xs text-cinema-400 leading-relaxed">
                 I agree to the{' '}
@@ -375,7 +387,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
           </div>
 
           {submitStatus === 'error' && (
-            <div className="p-3 rounded-md bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
+            <div className="p-3.5 rounded-2xl bg-rose-950/40 border border-rose-500/30 text-rose-300 text-xs flex items-center gap-2">
               <AlertCircle className="w-4 h-4 flex-shrink-0" />
               <span>{errorMessage}</span>
             </div>
@@ -384,17 +396,17 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
           <button
             type="submit"
             disabled={isSubmitting}
-            className="w-full py-3 px-6 rounded-md font-semibold text-cinema-950 bg-gold hover:bg-gold-light transition-colors flex items-center justify-center gap-2 text-sm disabled:opacity-60"
+            className="w-full py-4 px-8 rounded-2xl font-bold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-[0_10px_30px_rgba(212,175,55,0.28)] transition-all flex items-center justify-center gap-2 text-sm disabled:opacity-60 cursor-pointer"
           >
             {isSubmitting ? (
               <>
-                <Loader2 className="w-4 h-4 animate-spin" />
+                <Loader2 className="w-4 h-4 animate-spin text-cinema-950" />
                 <span>Submitting...</span>
               </>
             ) : (
               <>
-                <Send className="w-4 h-4" />
                 <span>Submit Exhibition Enquiry</span>
+                <Send className="w-4 h-4 text-cinema-950" />
               </>
             )}
           </button>

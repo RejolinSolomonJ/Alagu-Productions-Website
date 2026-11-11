@@ -71,35 +71,38 @@ export const PILLARS = [
 export function WhyChooseUsGrid() {
   return (
     <div className="w-full">
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 items-stretch">
         {PILLARS.map((pillar, idx) => {
           const Icon = pillar.icon;
           const isSpan = idx === 4;
           return (
             <div
               key={idx}
-              className={`rounded-lg bg-cinema-900 border border-white/10 p-6 sm:p-7 hover:border-gold/40 transition-colors duration-200 flex flex-col justify-between ${
+              className={`relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-9 hover:border-gold/40 transition-all duration-300 flex flex-col justify-between shadow-2xl group overflow-hidden ${
                 isSpan ? 'md:col-span-2 lg:col-span-2' : ''
               }`}
             >
+              {/* Top Specular Sheen */}
+              <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
               <div>
-                <div className="flex items-center justify-between mb-5">
-                  <div className="w-10 h-10 rounded bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold">
-                    <Icon className="w-5 h-5" />
+                <div className="flex items-center justify-between mb-6">
+                  <div className="w-12 h-12 rounded-2xl bg-white/[0.05] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
+                    <Icon className="w-6 h-6 text-gold" />
                   </div>
-                  <span className="font-sans text-xs text-cinema-400 px-2 py-0.5 rounded bg-black/40 border border-white/5">
+                  <span className="font-mono text-xs text-cinema-400 px-3 py-1 rounded-full bg-white/[0.04] border border-white/10">
                     0{idx + 1}
                   </span>
                 </div>
 
-                <div className="text-[11px] uppercase tracking-wider text-gold font-semibold mb-1">
+                <div className="text-[11px] uppercase tracking-widest text-gold font-semibold mb-1.5 font-sans">
                   {pillar.short}
                 </div>
-                <h3 className="font-serif text-xl font-bold text-white">
+                <h3 className="font-serif text-2xl font-bold text-white tracking-tight">
                   {pillar.title}
                 </h3>
                 {pillar.highlightNote && (
-                  <span className="inline-block text-[10px] text-amber-300 bg-amber-950/60 border border-amber-500/30 px-2 py-0.5 rounded mt-1 font-sans">
+                  <span className="inline-block text-[10px] text-gold-light bg-gold/10 border border-gold/25 px-2.5 py-0.5 rounded-full mt-2 font-mono">
                     {pillar.highlightNote}
                   </span>
                 )}
@@ -108,9 +111,9 @@ export function WhyChooseUsGrid() {
                   {pillar.description}
                 </p>
 
-                <ul className="mt-5 space-y-2 border-t border-white/10 pt-4">
+                <ul className="mt-6 space-y-2.5 border-t border-white/10 pt-5">
                   {pillar.points.map((pt, pIdx) => (
-                    <li key={pIdx} className="flex items-start gap-2.5 text-xs text-cinema-300">
+                    <li key={pIdx} className="flex items-start gap-2.5 text-xs text-cinema-300 leading-relaxed">
                       <CheckCircle2 className="w-4 h-4 text-gold flex-shrink-0 mt-0.5" />
                       <span>{pt}</span>
                     </li>
@@ -118,15 +121,15 @@ export function WhyChooseUsGrid() {
                 </ul>
               </div>
 
-              <div className="mt-6 pt-4 border-t border-white/10 flex items-center justify-between">
+              <div className="mt-8 pt-5 border-t border-white/10 flex items-center justify-between">
                 <Link
                   href="/partner"
-                  className="text-xs font-semibold text-gold hover:text-gold-light inline-flex items-center gap-1"
+                  className="text-xs font-semibold text-gold hover:text-gold-light inline-flex items-center gap-1 group/link"
                 >
                   <span>Discuss Partnership</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3.5 h-3.5 transform group-hover/link:translate-x-0.5 group-hover/link:-translate-y-0.5 transition-transform" />
                 </Link>
-                <span className="text-[11px] text-cinema-400">European Circuits</span>
+                <span className="text-[11px] font-mono text-cinema-400">European Circuits</span>
               </div>
             </div>
           );

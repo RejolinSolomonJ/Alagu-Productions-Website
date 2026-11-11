@@ -2,31 +2,35 @@ import React from 'react';
 
 export function ClapperboardBanner() {
   return (
-    <div className="w-full max-w-2xl mx-auto rounded-xl bg-cinema-900/80 border border-white/10 p-3 sm:p-4 shadow-card-clean backdrop-blur-md select-none">
-      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2 text-left">
-        <div className="p-2.5 rounded-lg bg-cinema-950/70 border border-white/5">
-          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block">
+    <div className="w-full max-w-2xl mx-auto rounded-3xl bg-white/[0.04] backdrop-blur-2xl border border-white/10 p-3.5 sm:p-4 shadow-2xl relative overflow-hidden select-none group hover:border-gold/30 transition-all duration-300">
+      {/* Top Glossy Specular Reflection Sheen */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+
+      {/* Grid of Glass Information Capsules */}
+      <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 text-left relative z-10">
+        <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block mb-0.5">
             Organization
           </span>
           <span className="font-semibold text-white text-xs sm:text-sm">Alagu Production</span>
         </div>
 
-        <div className="p-2.5 rounded-lg bg-cinema-950/70 border border-white/5">
-          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block">
+        <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block mb-0.5">
             Territory
           </span>
           <span className="font-semibold text-white text-xs sm:text-sm">Europe &amp; UK</span>
         </div>
 
-        <div className="p-2.5 rounded-lg bg-cinema-950/70 border border-white/5">
-          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block">
+        <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block mb-0.5">
             Mastering
           </span>
           <span className="font-semibold text-white text-xs sm:text-sm">DCI 4K &bull; Atmos</span>
         </div>
 
-        <div className="p-2.5 rounded-lg bg-cinema-950/70 border border-white/5">
-          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block">
+        <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors">
+          <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block mb-0.5">
             Season
           </span>
           <span className="font-semibold text-gold text-xs sm:text-sm">2025 &ndash; 2026 Slate</span>

@@ -37,8 +37,8 @@ export function Header() {
       <header
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
           isScrolled
-            ? 'bg-cinema-950/95 backdrop-blur-md py-3 border-b border-cinema-800/80 shadow-lg shadow-black/50'
-            : 'bg-gradient-to-b from-black/80 via-black/40 to-transparent py-4 sm:py-5'
+            ? 'bg-[#08090C]/80 backdrop-blur-2xl py-3 border-b border-white/10 shadow-[0_10px_30px_rgba(0,0,0,0.6)]'
+            : 'bg-[#08090C]/40 backdrop-blur-xl py-4 sm:py-5 border-b border-white/5'
         }`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -48,95 +48,88 @@ export function Header() {
               <Logo size={isScrolled ? 'sm' : 'md'} showTagline={!isScrolled} />
             </div>
 
-            {/* Desktop Navigation */}
-            <nav className="hidden lg:flex items-center gap-1 xl:gap-2" aria-label="Main Navigation">
+            {/* Desktop Navigation (Frosted Glass Capsule Bar) */}
+            <nav className="hidden lg:flex items-center gap-1.5 p-1 rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 shadow-inner" aria-label="Main Navigation">
               {NAV_LINKS.map((link) => {
                 const isActive = pathname === link.href;
                 return (
                   <Link
                     key={link.href}
                     href={link.href}
-                    className={`px-3.5 py-1.5 text-xs xl:text-sm font-medium tracking-normal transition-colors relative rounded-md ${
+                    className={`px-4 py-1.5 text-xs xl:text-sm font-medium tracking-normal transition-all duration-200 relative rounded-full ${
                       isActive
-                        ? 'text-white font-semibold'
-                        : 'text-cinema-400 hover:text-white'
+                        ? 'text-white font-semibold bg-white/[0.10] border border-white/15 shadow-sm'
+                        : 'text-cinema-300 hover:text-white hover:bg-white/[0.05]'
                     }`}
                   >
                     {link.label}
-                    {isActive && (
-                      <span className="absolute bottom-0 left-3.5 right-3.5 h-[2px] bg-gold rounded-full" />
-                    )}
                   </Link>
                 );
               })}
             </nav>
 
-            {/* Header Right CTA */}
-            <div className="flex items-center gap-3 flex-shrink-0">
+            {/* Partner CTA Button: Brushed Champagne Gold */}
+            <div className="hidden sm:flex items-center gap-3">
               <Link
                 href="/partner"
-                className="hidden sm:inline-flex items-center justify-center gap-2 px-5 py-2 rounded-lg text-xs sm:text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle transition-all duration-200 focus:outline-none"
+                className="group relative inline-flex items-center gap-2 px-5 py-2.5 rounded-full text-xs xl:text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle active:scale-[0.98] transition-all duration-200"
               >
                 <span>Partner With Us</span>
-                <ArrowUpRight className="w-3.5 h-3.5" />
+                <ArrowUpRight className="w-3.5 h-3.5 transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
               </Link>
+            </div>
 
-              {/* Mobile Menu Button */}
+            {/* Mobile Menu Button */}
+            <div className="flex lg:hidden items-center">
               <button
                 type="button"
                 onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-                className="lg:hidden p-2 rounded-md text-cinema-300 hover:text-white hover:bg-cinema-900 border border-cinema-800 transition-colors focus:outline-none focus-visible:ring-1 focus-visible:ring-gold"
-                aria-label={isMobileMenuOpen ? 'Close Menu' : 'Open Menu'}
+                className="p-2 rounded-xl text-cinema-300 hover:text-white bg-white/[0.05] border border-white/10 backdrop-blur-md transition-colors"
                 aria-expanded={isMobileMenuOpen}
+                aria-label="Toggle navigation menu"
               >
-                {isMobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+                {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
         </div>
       </header>
 
-      {/* Mobile Drawer */}
+      {/* Mobile Menu Drawer (Frosted Glassmorphic Overlay) */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 lg:hidden bg-cinema-950/98 backdrop-blur-xl pt-24 px-6 pb-8 flex flex-col justify-between"
-          role="dialog"
-          aria-modal="true"
+          className="fixed inset-0 z-40 lg:hidden bg-black/70 backdrop-blur-2xl pt-24 pb-8 px-6 flex flex-col justify-between"
+          onClick={() => setIsMobileMenuOpen(false)}
         >
-          <div className="flex flex-col space-y-1">
-            <span className="text-[11px] uppercase tracking-wider text-cinema-500 font-semibold mb-2 px-3">
-              Navigation
-            </span>
+          <nav className="space-y-2 mt-4" onClick={(e) => e.stopPropagation()}>
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`px-3 py-2.5 rounded-md text-sm font-medium flex items-center justify-between transition-colors ${
+                  className={`block px-5 py-3 rounded-2xl text-base font-medium transition-all ${
                     isActive
-                      ? 'bg-cinema-900 text-gold font-semibold'
-                      : 'text-cinema-300 hover:text-white hover:bg-cinema-900/50'
+                      ? 'text-white bg-white/[0.12] border border-white/15 font-semibold shadow-inner'
+                      : 'text-cinema-300 hover:text-white hover:bg-white/[0.05]'
                   }`}
                 >
-                  <span>{link.label}</span>
-                  {isActive && <span className="w-1.5 h-1.5 rounded-full bg-gold" />}
+                  {link.label}
                 </Link>
               );
             })}
-          </div>
+          </nav>
 
-          <div className="mt-8 pt-6 border-t border-cinema-800 space-y-3">
+          <div className="pt-6 border-t border-white/10 space-y-3" onClick={(e) => e.stopPropagation()}>
             <Link
               href="/partner"
-              className="w-full py-3 px-4 rounded-md text-center font-semibold text-xs sm:text-sm text-cinema-950 bg-gold hover:bg-gold-light flex items-center justify-center gap-2 shadow-sm"
+              className="w-full py-3.5 px-6 rounded-2xl text-center text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle flex items-center justify-center gap-2"
             >
-              <span>Become an Exhibition Partner</span>
+              <span>Partner With Us</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
-
-            <div className="text-center text-xs text-cinema-400 pt-2">
-              European Theatrical Operations: +995 504 88 79 72
+            <div className="text-center text-xs font-mono text-cinema-400">
+              European Indian Film Distribution Desk
             </div>
           </div>
         </div>

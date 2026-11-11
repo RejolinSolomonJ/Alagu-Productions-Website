@@ -13,7 +13,7 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
 
   if (!testimonials || testimonials.length === 0) {
     return (
-      <div className="rounded-lg bg-cinema-900 border border-white/10 p-8 text-center text-cinema-400">
+      <div className="rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 text-center text-cinema-400 shadow-2xl">
         <Info className="w-8 h-8 mx-auto mb-2 text-gold opacity-60" />
         <p className="font-serif text-lg text-white">Exhibitor Testimonials</p>
         <p className="text-xs mt-1">
@@ -34,72 +34,71 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
   };
 
   return (
-    <div className="relative rounded-lg bg-cinema-900 border border-white/10 p-6 sm:p-8 shadow-card-clean overflow-hidden">
+    <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300">
+      {/* Top Glossy Sheen Line */}
+      <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
+
       {/* Background quote mark */}
       <div className="absolute top-4 right-6 text-gold/5 pointer-events-none">
         <Quote className="w-28 h-28" />
       </div>
 
       {/* Header status bar */}
-      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
+      <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10 relative z-10">
         <div className="flex items-center gap-2">
           <Quote className="w-4 h-4 text-gold" />
-          <span className="text-[11px] uppercase tracking-wider text-gold font-semibold font-sans">
+          <span className="text-[11px] uppercase tracking-widest text-gold font-semibold font-sans">
             Partner Cinema Feedback &amp; Verification
           </span>
         </div>
 
         {/* CMS Audit Status Badge */}
-        <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded text-[11px] font-sans bg-amber-950/60 text-amber-300 border border-amber-500/30">
-          <ShieldAlert className="w-3.5 h-3.5 text-amber-400" />
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-[10px] font-mono bg-gold/10 text-gold-light border border-gold/25">
+          <ShieldAlert className="w-3.5 h-3.5 text-gold" />
           <span>{current.isApproved ? 'Approved for Publication' : 'Pending Formal Written Approval'}</span>
         </div>
       </div>
 
       {/* Quote Display */}
       <div className="relative z-10 py-3 min-h-[120px] flex flex-col justify-center">
-        <blockquote className="font-serif text-lg sm:text-xl text-cinema-100 italic leading-relaxed">
+        <p className="font-serif text-lg sm:text-xl md:text-2xl text-white italic leading-relaxed">
           &ldquo;{current.quote}&rdquo;
-        </blockquote>
-
-        <div className="mt-6 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
-          <div>
-            <div className="font-semibold text-white text-sm sm:text-base">
-              {current.author}
-            </div>
-            <div className="text-xs text-cinema-400">
-              {current.role} &bull; <span className="text-cinema-300">{current.organization}</span> ({current.city}, {current.country})
-            </div>
-          </div>
-
-          {/* Slider controls */}
-          <div className="flex items-center gap-2">
-            <span className="text-xs text-cinema-400 mr-2 font-sans">
-              {currentIndex + 1} / {testimonials.length}
-            </span>
-            <button
-              type="button"
-              onClick={handlePrev}
-              className="p-2 rounded bg-cinema-950 hover:bg-white/[0.05] border border-white/10 text-cinema-300 hover:text-white transition-colors"
-              aria-label="Previous testimonial"
-            >
-              <ChevronLeft className="w-4 h-4" />
-            </button>
-            <button
-              type="button"
-              onClick={handleNext}
-              className="p-2 rounded bg-cinema-950 hover:bg-white/[0.05] border border-white/10 text-cinema-300 hover:text-white transition-colors"
-              aria-label="Next testimonial"
-            >
-              <ChevronRight className="w-4 h-4" />
-            </button>
-          </div>
-        </div>
+        </p>
       </div>
 
-      {/* Audit Footnote */}
-      <div className="mt-6 pt-4 border-t border-white/10 text-[11px] text-cinema-500 font-sans">
-        Per editorial standards, exhibition reviews and quotes are marked pending confirmation until signed theatrical release affidavits are uploaded to the CMS repository.
+      {/* Author and Navigation */}
+      <div className="relative z-10 mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+        <div>
+          <h4 className="font-serif text-base font-bold text-white">
+            {current.author}
+          </h4>
+          <p className="text-xs text-cinema-400 font-sans">
+            {current.role} &bull; <span className="text-cinema-300">{current.cinemaName}</span> ({current.location})
+          </p>
+        </div>
+
+        {/* Controls (Frosted Glass Buttons) */}
+        <div className="flex items-center gap-2">
+          <button
+            type="button"
+            onClick={handlePrev}
+            className="p-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-md text-white border border-white/10 transition-colors"
+            aria-label="Previous testimonial"
+          >
+            <ChevronLeft className="w-4 h-4" />
+          </button>
+          <span className="text-xs font-mono text-cinema-400 px-1">
+            {currentIndex + 1} / {testimonials.length}
+          </span>
+          <button
+            type="button"
+            onClick={handleNext}
+            className="p-2.5 rounded-full bg-white/[0.04] hover:bg-white/[0.08] backdrop-blur-md text-white border border-white/10 transition-colors"
+            aria-label="Next testimonial"
+          >
+            <ChevronRight className="w-4 h-4" />
+          </button>
+        </div>
       </div>
     </div>
   );

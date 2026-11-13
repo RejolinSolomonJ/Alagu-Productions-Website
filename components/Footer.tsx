@@ -154,10 +154,34 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar (Frosted Glass Ribbon) */}
-        <div className="pt-8 mt-8 border-t border-white/10 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-cinema-400 font-sans">
+        <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cinema-400 font-sans">
           <div>
             &copy; {currentYear} Alagu Production. Overseas Indian Movie Distribution &amp; Exhibition. All rights reserved.
           </div>
+
+          {/* Developer Attribution with Interactive Hover Badge */}
+          <div className="flex items-center gap-1.5 text-xs text-cinema-400">
+            <span>Developed by</span>
+            <a
+              href="https://www.linsinfotech.in"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="relative group/dev inline-flex items-center gap-1 text-cinema-200 hover:text-gold font-medium transition-all hover:underline underline-offset-4"
+              title="www.linsinfotech.in"
+            >
+              <span className="font-semibold text-white group-hover/dev:text-gold transition-colors">
+                Lin&apos;s Infotech Company Ltd.
+              </span>
+              <span className="inline-block transition-transform duration-200 group-hover/dev:translate-x-0.5 group-hover/dev:-translate-y-0.5 text-gold text-[10px]">
+                ↗
+              </span>
+              {/* Floating Hover Tooltip showing www.linsinfotech.in */}
+              <span className="pointer-events-none absolute -top-8 left-1/2 -translate-x-1/2 opacity-0 group-hover/dev:opacity-100 transition-all duration-200 px-2.5 py-1 rounded-md bg-black/95 text-[11px] font-mono font-medium text-gold border border-gold/40 shadow-xl whitespace-nowrap z-30">
+                www.linsinfotech.in
+              </span>
+            </a>
+          </div>
+
           <div className="flex items-center gap-6">
             <Link href="/privacy-policy" className="hover:text-gold transition-colors">
               Privacy Policy

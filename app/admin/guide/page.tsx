@@ -11,6 +11,7 @@ import {
   Globe,
   Upload,
   Server,
+  Code,
 } from 'lucide-react';
 
 export const metadata: Metadata = {
@@ -121,6 +122,27 @@ export default function CMSGuidePage() {
                 npm install sanity @sanity/client{'\n'}
                 npx sanity init --dataset production
               </pre>
+            </div>
+
+            {/* Section 6: Engineering & Maintenance */}
+            <div className="space-y-3 p-5 rounded-2xl bg-cinema-900 border border-cinema-800">
+              <h2 className="text-base font-bold text-gold flex items-center gap-2">
+                <Code className="w-4 h-4" />
+                <span>6. Platform Engineering &amp; Maintenance</span>
+              </h2>
+              <p className="text-cinema-300">
+                Developed by{' '}
+                <a
+                  href="https://www.linsinfotech.in"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-white hover:text-gold font-semibold underline underline-offset-4 transition-colors"
+                  title="www.linsinfotech.in"
+                >
+                  Lin&apos;s Infotech Company Ltd. (www.linsinfotech.in)
+                </a>
+                . For platform enhancements, security audits, and infrastructure support, reach out to Lin&apos;s Infotech engineering team.
+              </p>
             </div>
           </div>
         </div>

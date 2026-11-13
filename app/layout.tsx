@@ -23,8 +23,11 @@ export const metadata: Metadata = {
     'Theatrical booking Indian movies',
     'DCI DCP KDM Indian films Europe',
   ],
-  authors: [{ name: 'Alagu Production' }],
-  creator: 'Alagu Production',
+  authors: [
+    { name: 'Alagu Production' },
+    { name: "Lin's Infotech Company Ltd.", url: 'https://www.linsinfotech.in' },
+  ],
+  creator: "Lin's Infotech Company Ltd. (https://www.linsinfotech.in)",
   publisher: 'Alagu Production',
   icons: {
     icon: '/logo.png',

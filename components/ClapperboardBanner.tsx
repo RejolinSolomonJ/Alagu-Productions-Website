@@ -28,9 +28,9 @@ export function ClapperboardBanner() {
 
         <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-center">
           <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400 block mb-0.5">
-            Territory
+            Territories
           </span>
-          <span className="font-semibold text-white text-xs sm:text-sm">Europe &amp; UK</span>
+          <span className="font-semibold text-white text-xs sm:text-sm">10 Key Nations</span>
         </div>
 
         <div className="p-3 rounded-2xl bg-white/[0.03] backdrop-blur-md border border-white/5 hover:border-white/10 transition-colors flex flex-col justify-center">

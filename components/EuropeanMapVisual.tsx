@@ -12,18 +12,16 @@ interface CityHub {
 }
 
 const HUBS: CityHub[] = [
-  { name: 'London', country: 'United Kingdom', x: 28, y: 44, highlight: true },
-  { name: 'Paris', country: 'France', x: 34, y: 55, highlight: true },
-  { name: 'Frankfurt', country: 'Germany', x: 48, y: 48, highlight: true },
-  { name: 'Berlin', country: 'Germany', x: 55, y: 38, highlight: true },
-  { name: 'Amsterdam', country: 'Netherlands', x: 40, y: 41, highlight: true },
-  { name: 'Zurich', country: 'Switzerland', x: 47, y: 62 },
-  { name: 'Dublin', country: 'Ireland', x: 19, y: 39 },
-  { name: 'Warsaw', country: 'Poland', x: 68, y: 39 },
-  { name: 'Stockholm', country: 'Sweden', x: 62, y: 22 },
-  { name: 'Oslo', country: 'Norway', x: 50, y: 20 },
-  { name: 'Rome', country: 'Italy', x: 53, y: 76 },
-  { name: 'Tbilisi', country: 'Georgia', x: 88, y: 65, highlight: true },
+  { name: 'Tbilisi', country: 'Georgia', x: 44, y: 56, highlight: true },
+  { name: 'Manila', country: 'Philippines', x: 86, y: 72, highlight: true },
+  { name: 'Yerevan', country: 'Armenia', x: 42, y: 64, highlight: true },
+  { name: 'Baku', country: 'Azerbaijan', x: 50, y: 58, highlight: true },
+  { name: 'Minsk', country: 'Belarus', x: 28, y: 32, highlight: true },
+  { name: 'Almaty', country: 'Kazakhstan', x: 68, y: 44, highlight: true },
+  { name: 'Chisinau', country: 'Moldova', x: 32, y: 46, highlight: true },
+  { name: 'Tashkent', country: 'Uzbekistan', x: 60, y: 52, highlight: true },
+  { name: 'Bishkek', country: 'Kyrgyzstan', x: 70, y: 52, highlight: true },
+  { name: 'Ashgabat', country: 'Turkmenistan', x: 54, y: 62, highlight: true },
 ];
 
 export function EuropeanMapVisual() {
@@ -43,10 +41,10 @@ export function EuropeanMapVisual() {
             <span>Active Theatrical Network</span>
           </div>
           <h3 className="font-sans text-2xl sm:text-3xl font-extrabold text-white tracking-tight">
-            European Distribution &amp; Exhibition Corridors
+            International Distribution &amp; Exhibition Corridors
           </h3>
           <p className="text-sm text-cinema-300 mt-1 max-w-xl leading-relaxed">
-            Direct coordination with European multiplex chains and cultural exhibition centers, enabling simultaneous multi-territory theatrical premieres.
+            Direct theatrical coordination across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan &amp; Turkmenistan.
           </p>
         </div>
 
@@ -61,7 +59,7 @@ export function EuropeanMapVisual() {
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40" />
 
-        {/* SVG connection lines between London and other hubs */}
+        {/* SVG connection lines between Tbilisi and other hubs */}
         <svg className="absolute inset-0 w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg">
           <defs>
             <linearGradient id="beamGrad" x1="0%" y1="0%" x2="100%" y2="100%">
@@ -70,7 +68,7 @@ export function EuropeanMapVisual() {
             </linearGradient>
           </defs>
 
-          {HUBS.filter((h) => h.name !== 'London').map((hub, i) => (
+          {HUBS.filter((h) => h.name !== 'Tbilisi').map((hub, i) => (
             <line
               key={i}
               x1={`${HUBS[0].x}%`}

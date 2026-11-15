@@ -5,22 +5,16 @@ import Link from 'next/link';
 import { Send, CheckCircle2, AlertCircle, Phone, Mail, Loader2, Sparkles } from 'lucide-react';
 
 const COUNTRIES = [
-  { code: 'GB', name: 'United Kingdom', dial: '+44' },
-  { code: 'DE', name: 'Germany', dial: '+49' },
-  { code: 'FR', name: 'France', dial: '+33' },
-  { code: 'NL', name: 'Netherlands', dial: '+31' },
-  { code: 'CH', name: 'Switzerland', dial: '+41' },
-  { code: 'IE', name: 'Ireland', dial: '+353' },
-  { code: 'PL', name: 'Poland', dial: '+48' },
-  { code: 'SE', name: 'Sweden', dial: '+46' },
-  { code: 'NO', name: 'Norway', dial: '+47' },
-  { code: 'DK', name: 'Denmark', dial: '+45' },
-  { code: 'FI', name: 'Finland', dial: '+358' },
-  { code: 'IT', name: 'Italy', dial: '+39' },
-  { code: 'ES', name: 'Spain', dial: '+34' },
-  { code: 'AT', name: 'Austria', dial: '+43' },
-  { code: 'BE', name: 'Belgium', dial: '+32' },
   { code: 'GE', name: 'Georgia', dial: '+995' },
+  { code: 'PH', name: 'Philippines', dial: '+63' },
+  { code: 'AM', name: 'Armenia', dial: '+374' },
+  { code: 'AZ', name: 'Azerbaijan', dial: '+994' },
+  { code: 'BY', name: 'Belarus', dial: '+375' },
+  { code: 'KZ', name: 'Kazakhstan', dial: '+7' },
+  { code: 'MD', name: 'Moldova', dial: '+373' },
+  { code: 'UZ', name: 'Uzbekistan', dial: '+998' },
+  { code: 'KG', name: 'Kyrgyzstan', dial: '+996' },
+  { code: 'TM', name: 'Turkmenistan', dial: '+993' },
   { code: 'OTHER', name: 'Other Territory', dial: '+1' },
 ];
 
@@ -41,11 +35,11 @@ interface PartnerEnquiryFormProps {
 }
 
 export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: PartnerEnquiryFormProps) {
-  const [country, setCountry] = useState('United Kingdom');
+  const [country, setCountry] = useState('Georgia');
   const [city, setCity] = useState('');
   const [cinemaName, setCinemaName] = useState('');
   const [contactName, setContactName] = useState('');
-  const [phoneCountryCode, setPhoneCountryCode] = useState('+44');
+  const [phoneCountryCode, setPhoneCountryCode] = useState('+995');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [email, setEmail] = useState('');
   const [selectedFilm, setSelectedFilm] = useState(prefilledFilm);

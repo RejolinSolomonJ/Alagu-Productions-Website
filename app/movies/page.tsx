@@ -69,7 +69,7 @@ export default function MoviesPage() {
           </h1>
 
           <p className="mt-4 text-cinema-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            Curated catalogue of high-demand Indian feature films available for theatrical booking and exhibition across the United Kingdom and continental Europe.
+            Curated catalogue of high-demand Indian feature films available for theatrical booking and exhibition across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.
           </p>
         </div>
       </section>

@@ -8,12 +8,12 @@ export const PILLARS = [
   {
     icon: Globe,
     title: 'International Distribution',
-    short: 'Pan-European Footprint',
+    short: '10 Distributed Territories',
     description:
-      'Seamless distribution network reaching key European cinematic circuits across the UK, Germany, France, Netherlands, Nordics, Switzerland, Poland, and Georgia.',
+      'Seamless distribution network reaching key cinematic exhibition circuits across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.',
     points: [
       'Simultaneous multi-country theatrical day-and-date premieres',
-      'Direct coordination with European cultural censors & local ratings bodies',
+      'Direct coordination with cultural censors & local ratings bodies',
       'Optimised logistics for DCP shipment and encrypted KDM delivery',
     ],
   },

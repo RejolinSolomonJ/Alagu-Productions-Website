@@ -27,7 +27,7 @@ export function Footer() {
               <span>Partner of <strong className="text-white font-semibold">MADSOULS PRODUCTION LLC</strong></span>
             </div>
             <p className="text-sm text-cinema-300 max-w-sm leading-relaxed">
-              Europe&apos;s trusted overseas Indian film distribution and exhibition partner. Connecting visionary Indian cinema with European audiences through premier theatrical distribution.
+              Trusted overseas Indian film distribution and exhibition partner. Connecting visionary Indian cinema with audiences across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.
             </p>
             <div className="flex flex-col space-y-3 pt-2 text-sm">
               <a

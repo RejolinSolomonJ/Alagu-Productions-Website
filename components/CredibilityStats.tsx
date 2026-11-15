@@ -91,7 +91,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
             </div>
 
             <p className="text-xs sm:text-sm text-cinema-300 leading-relaxed pt-1">
-              Pan-European theatrical distribution &amp; premier exhibition track record.
+              International theatrical distribution &amp; premier exhibition track record.
             </p>
           </div>
         </div>
@@ -109,14 +109,14 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
             </div>
 
             <span className="text-[10px] font-bold text-[#0A0B0E] bg-[#0A0B0E]/12 px-2.5 py-1 rounded-full border border-[#0A0B0E]/15 uppercase tracking-wider font-mono">
-              Pan-Europe
+              10 Territories
             </span>
           </div>
 
           {/* Content */}
           <div className="relative z-10 mt-6 space-y-2">
             <span className="text-[11px] font-bold text-[#0A0B0E]/80 uppercase tracking-widest block font-sans">
-              Territories Covered
+              Territories Distributed
             </span>
 
             <div className="text-4xl sm:text-5xl font-black text-[#0A0B0E] tracking-tight flex items-baseline font-sans">
@@ -125,12 +125,12 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
             </div>
 
             <p className="text-xs sm:text-sm text-[#0A0B0E]/85 font-medium leading-relaxed">
-              Active screening circuits in UK, Germany, France, Nordics, Benelux &amp; beyond.
+              Active theatrical circuits in Georgia, Philippines, Armenia, Azerbaijan, Kazakhstan &amp; more.
             </p>
 
             {/* Bottom Typographic Territory Chips */}
             <div className="pt-2 flex flex-wrap gap-1.5">
-              {['UK', 'Germany', 'France', 'Benelux', '+6 more'].map((t) => (
+              {['Georgia', 'Philippines', 'Armenia', 'Kazakhstan', '+6 more'].map((t) => (
                 <span
                   key={t}
                   className="px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#0A0B0E]/15 text-[#0A0B0E] border border-[#0A0B0E]/20"

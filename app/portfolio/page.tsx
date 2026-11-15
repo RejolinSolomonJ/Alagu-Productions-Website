@@ -66,7 +66,7 @@ export default function PortfolioPage() {
           </h1>
 
           <p className="mt-4 text-cinema-300 text-sm sm:text-base max-w-2xl mx-auto leading-relaxed">
-            A verified record of theatrical screening circuits and European premiere engagements executed by Alagu Production.
+            A verified record of theatrical screening circuits and premiere engagements executed by Alagu Production across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.
           </p>
         </div>
       </section>

@@ -23,7 +23,7 @@ export function CinematicHero({
   posterSrc = HERO_VIDEO_CONFIG.posterSrc,
   badgeText = 'Overseas Indian Film Distribution • Partner of MADSOULS PRODUCTION LLC',
   headline,
-  subtext = 'Europe’s dedicated distribution partner connecting premier Indian cinema blockbusters to leading multiplexes, independent theatre operators, and diaspora audiences in strategic partnership with MADSOULS PRODUCTION LLC.',
+  subtext = 'Overseas distribution partner connecting premier Indian cinema blockbusters to leading multiplexes across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan in strategic partnership with MADSOULS PRODUCTION LLC.',
   primaryCtaText = 'Become an Exhibition Partner',
   primaryCtaHref = '/partner',
   secondaryCtaText = 'Explore Theatrical Slate',

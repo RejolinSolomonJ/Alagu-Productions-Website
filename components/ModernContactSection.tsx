@@ -113,7 +113,7 @@ export function ModernContactSection({
               </h2>
 
               <p className="mt-4 text-cinema-300 text-sm sm:text-base leading-relaxed">
-                Connect with our European theatrical distribution desk for screening bookings, KDM coordination, or international co-distribution across continental circuits.
+                Connect with our theatrical distribution desk for screening bookings, KDM coordination, or exhibition across our 10 distributed international territories.
               </p>
 
               {/* Direct Info Items with Styled Icon Blocks */}
@@ -146,10 +146,10 @@ export function ModernContactSection({
                       Operations Hub
                     </span>
                     <span className="text-sm sm:text-base font-medium text-white block">
-                      European Distribution Headquarters
+                      International Distribution Headquarters
                     </span>
                     <span className="text-xs text-cinema-400 block mt-0.5 leading-relaxed">
-                      Active in UK, Germany, France, Nordics, Switzerland, Poland &amp; Georgia
+                      Distributed in Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan &amp; Turkmenistan
                     </span>
                   </div>
                 </div>

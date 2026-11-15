@@ -52,11 +52,11 @@ export default function HomePage() {
             </span>
 
             <h2 className="mt-3 font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-white tracking-tight leading-tight">
-              Connecting Indian Cinema With European Audiences
+              Connecting Indian Cinema With International Audiences
             </h2>
 
             <p className="mt-4 text-cinema-300 text-sm sm:text-base leading-relaxed">
-              Bridging premier Indian production studios with European cinema operators through certified DCI mastering, encrypted KDM dispatch, and dedicated exhibition support.
+              Bridging premier Indian production studios with cinema operators across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.
             </p>
           </div>
 
@@ -76,7 +76,7 @@ export default function HomePage() {
                   </span>
 
                   <span className="text-[10px] uppercase font-mono tracking-wider text-cinema-400">
-                    Tbilisi &bull; London &bull; Chennai
+                    Tbilisi &bull; Manila &bull; Almaty &bull; Baku
                   </span>
                 </div>
 

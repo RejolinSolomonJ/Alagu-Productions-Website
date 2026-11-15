@@ -149,7 +149,7 @@ export default function AboutPage() {
               Active Theatrical Circuits Across Europe
             </h2>
             <p className="text-cinema-300 text-sm sm:text-base mt-3 leading-relaxed">
-              From historic independent screens to premier commercial multiplexes across the United Kingdom, Germany, France, Nordics, and Eastern Europe.
+              From historic independent screens to premier commercial multiplexes across Georgia, Philippines, Armenia, Azerbaijan, Belarus, Kazakhstan, Moldova, Uzbekistan, Kyrgyzstan, and Turkmenistan.
             </p>
           </div>
 

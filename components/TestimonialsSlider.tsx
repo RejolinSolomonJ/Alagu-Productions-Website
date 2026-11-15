@@ -34,7 +34,7 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
   };
 
   return (
-    <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300">
+    <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-10 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300">
       {/* Top Glossy Sheen Line */}
       <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
 
@@ -61,13 +61,13 @@ export function TestimonialsSlider({ testimonials }: TestimonialsSliderProps) {
 
       {/* Quote Display */}
       <div className="relative z-10 py-3 min-h-[120px] flex flex-col justify-center">
-        <p className="font-sans text-lg sm:text-xl md:text-2xl text-white font-medium italic leading-relaxed">
+        <p className="font-sans text-base sm:text-xl md:text-2xl text-white font-medium italic leading-relaxed">
           &ldquo;{current.quote}&rdquo;
         </p>
       </div>
 
       {/* Author and Navigation */}
-      <div className="relative z-10 mt-6 pt-6 border-t border-white/10 flex items-center justify-between">
+      <div className="relative z-10 mt-6 pt-6 border-t border-white/10 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
         <div>
           <h4 className="font-sans text-base font-bold text-white tracking-tight">
             {current.author}

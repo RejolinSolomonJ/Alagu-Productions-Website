@@ -41,13 +41,13 @@ export function CinematicHero({
     video.defaultMuted = true;
     video.playsInline = true;
 
-    video.play().catch(() => {});
+    video.play().catch(() => { });
 
     const handleVisibilityChange = () => {
       if (document.hidden) {
         video.pause();
       } else {
-        video.play().catch(() => {});
+        video.play().catch(() => { });
       }
     };
 
@@ -58,7 +58,7 @@ export function CinematicHero({
   const togglePlay = () => {
     if (!videoRef.current) return;
     if (videoRef.current.paused) {
-      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => {});
+      videoRef.current.play().then(() => setIsPlaying(true)).catch(() => { });
     } else {
       videoRef.current.pause();
       setIsPlaying(false);
@@ -106,9 +106,9 @@ export function CinematicHero({
       {/* Hero Content Container */}
       <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-20 text-center flex flex-col items-center">
         {/* Subtitle Pill Badge (Frosted Glass) */}
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-xl border border-white/15 text-cinema-200 text-xs font-medium tracking-wide mb-6 shadow-sm">
-          <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
-          <span className="font-mono text-[11px] uppercase tracking-wider">{badgeText}</span>
+        <div className="inline-flex items-center gap-2 px-3.5 sm:px-4 py-1.5 rounded-full bg-white/[0.04] backdrop-blur-xl border border-white/15 text-cinema-200 text-xs font-medium tracking-wide mb-5 sm:mb-6 shadow-sm max-w-[92vw]">
+          <span className="w-2 h-2 rounded-full bg-gold animate-pulse shrink-0" />
+          <span className="font-mono text-[10px] sm:text-[11px] uppercase tracking-wider truncate">{badgeText}</span>
         </div>
 
         {/* Clean, Majestic Headings */}
@@ -155,17 +155,17 @@ export function CinematicHero({
         </div>
 
         {/* Technical Standard Badges (Frosted Glass Ribbon) */}
-        <div className="mt-8 px-6 py-2.5 rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 flex flex-wrap items-center justify-center gap-6 text-xs text-cinema-300 font-mono shadow-sm">
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400" />
+        <div className="mt-6 sm:mt-8 px-4 sm:px-6 py-2 sm:py-2.5 rounded-2xl sm:rounded-full bg-white/[0.03] backdrop-blur-xl border border-white/10 flex flex-wrap items-center justify-center gap-3 sm:gap-6 text-[10px] sm:text-xs text-cinema-300 font-mono shadow-sm">
+          <span className="flex items-center gap-1.5 sm:gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 shrink-0" />
             DCI 2K &amp; 4K Scope
           </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+          <span className="flex items-center gap-1.5 sm:gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-gold shrink-0" />
             Dolby Atmos &bull; 7.1 Surround
           </span>
-          <span className="flex items-center gap-2">
-            <span className="w-1.5 h-1.5 rounded-full bg-cinema-400" />
+          <span className="flex items-center gap-1.5 sm:gap-2">
+            <span className="w-1.5 h-1.5 rounded-full bg-cinema-400 shrink-0" />
             Encrypted KDM Dispatch
           </span>
         </div>

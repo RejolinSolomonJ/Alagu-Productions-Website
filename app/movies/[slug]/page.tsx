@@ -96,7 +96,7 @@ export default function MovieDetailPage({ params }: Props) {
           {/* Backdrop gradient glow */}
           <div className={`absolute inset-0 bg-gradient-to-r ${movie.bannerGradient} opacity-20 pointer-events-none`} />
 
-          <div className="relative z-10 p-6 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
+          <div className="relative z-10 p-5 sm:p-10 lg:p-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start">
             {/* Left Poster Presentation */}
             <div className="lg:col-span-5 w-full max-w-md mx-auto">
               <div className="aspect-[2/3] rounded-2xl overflow-hidden bg-black/60 border border-white/15 relative flex flex-col justify-between p-6 shadow-2xl">

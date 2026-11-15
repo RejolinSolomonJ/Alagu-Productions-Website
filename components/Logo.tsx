@@ -42,7 +42,7 @@ export function Logo({ className = '', size = 'md', showTagline = false }: LogoP
           ALAGU <span className="text-gold font-normal">PRODUCTION</span>
         </span>
         {showTagline && (
-          <span className="text-[9px] uppercase tracking-[0.22em] text-cinema-400 font-sans font-medium leading-none mt-0.5">
+          <span className="hidden sm:block text-[9px] uppercase tracking-[0.22em] text-cinema-400 font-sans font-medium leading-none mt-0.5">
             Overseas Distribution &amp; Exhibition
           </span>
         )}

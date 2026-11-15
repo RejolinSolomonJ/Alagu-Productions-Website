@@ -154,13 +154,13 @@ export function Footer() {
         </div>
 
         {/* Bottom Bar (Frosted Glass Ribbon) */}
-        <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cinema-400 font-sans">
-          <div>
+        <div className="pt-8 mt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-cinema-400 font-sans text-center md:text-left">
+          <div className="max-w-md">
             &copy; {currentYear} Alagu Production. Overseas Indian Movie Distribution &amp; Exhibition. All rights reserved.
           </div>
 
           {/* Developer Attribution with Interactive Hover Badge */}
-          <div className="flex items-center gap-1.5 text-xs text-cinema-400">
+          <div className="flex flex-wrap items-center justify-center md:justify-start gap-1.5 text-xs text-cinema-400">
             <span>Developed by</span>
             <a
               href="https://www.linsinfotech.in"
@@ -182,7 +182,7 @@ export function Footer() {
             </a>
           </div>
 
-          <div className="flex items-center gap-6">
+          <div className="flex flex-wrap items-center justify-center gap-6">
             <Link href="/privacy-policy" className="hover:text-gold transition-colors">
               Privacy Policy
             </Link>

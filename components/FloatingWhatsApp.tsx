@@ -14,7 +14,7 @@ export function FloatingWhatsApp() {
   return (
     <aside
       aria-label="Direct WhatsApp Contact"
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-3 select-none print:hidden pointer-events-auto"
+      className="fixed bottom-4 right-4 sm:bottom-6 sm:right-6 z-40 flex items-center gap-3 select-none print:hidden pointer-events-auto"
     >
       {/* Tooltip / Label */}
       <div
@@ -36,7 +36,7 @@ export function FloatingWhatsApp() {
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         aria-label="Contact Alagu Production on WhatsApp"
-        className="relative group w-14 h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.45)] hover:shadow-[0_15px_40px_rgba(37,211,102,0.65)] hover:scale-110 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-400/40"
+        className="relative group w-12 h-12 sm:w-14 sm:h-14 rounded-full bg-[#25D366] text-white flex items-center justify-center shadow-[0_10px_30px_rgba(37,211,102,0.45)] hover:shadow-[0_15px_40px_rgba(37,211,102,0.65)] hover:scale-105 active:scale-95 transition-all duration-300 focus:outline-none focus:ring-4 focus:ring-emerald-400/40"
       >
         {/* Soft Ambient Pulse Ring */}
         <span
@@ -46,7 +46,7 @@ export function FloatingWhatsApp() {
 
         {/* WhatsApp Official SVG Icon */}
         <svg
-          className="w-7 h-7 fill-current relative z-10 drop-shadow-sm transition-transform duration-300 group-hover:rotate-6"
+          className="w-6 h-6 sm:w-7 sm:h-7 fill-current relative z-10 drop-shadow-sm transition-transform duration-300 group-hover:rotate-6"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
         >

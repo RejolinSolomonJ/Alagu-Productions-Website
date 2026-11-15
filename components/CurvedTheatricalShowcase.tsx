@@ -275,7 +275,8 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
           {isAutoPlay ? <Pause className="w-3 h-3" /> : <Play className="w-3 h-3" />}
         </button>
 
-        <div className="flex items-center gap-1.5">
+        {/* Desktop Dots */}
+        <div className="hidden sm:flex items-center gap-1.5">
           {movies.map((m, idx) => (
             <button
               key={m.id}
@@ -286,6 +287,14 @@ export function CurvedTheatricalShowcase({ movies }: CurvedTheatricalShowcasePro
               aria-label={`Go to slide ${idx + 1}`}
             />
           ))}
+        </div>
+
+        {/* Mobile Progress Bar Indicator */}
+        <div className="sm:hidden w-28 h-1.5 bg-white/15 rounded-full overflow-hidden">
+          <div
+            className="h-full bg-gold rounded-full transition-all duration-300"
+            style={{ width: `${((activeIndex + 1) / total) * 100}%` }}
+          />
         </div>
 
         <span className="text-[11px] font-mono text-cinema-400 ml-1">

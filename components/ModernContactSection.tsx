@@ -79,7 +79,7 @@ export function ModernContactSection({
   };
 
   return (
-    <section className={`relative w-full py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#08090C] ${className}`}>
+    <section className={`relative w-full py-12 sm:py-20 px-4 sm:px-6 lg:px-8 overflow-hidden bg-[#08090C] ${className}`}>
       {/* Subtle Warm Luxury Ambient Backlight */}
       <div className="absolute top-1/2 left-1/4 -translate-y-1/2 -translate-x-1/2 w-[550px] h-[450px] bg-gold/5 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/2 right-1/4 -translate-y-1/2 translate-x-1/2 w-[450px] h-[450px] bg-white/[0.02] rounded-full blur-[120px] pointer-events-none" />
@@ -100,9 +100,9 @@ export function ModernContactSection({
         </div>
 
         {/* 2-Card Glassmorphic Luxury Container Grid */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-10 items-stretch">
           {/* Card 1: Contact Info (Frosted Glassmorphic Card) */}
-          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
+          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
             {/* Top Glossy Corner Sheen (matching reference reflection) */}
             <div className="absolute top-0 right-0 w-52 h-52 bg-white/[0.04] rounded-full blur-3xl pointer-events-none" />
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -190,7 +190,7 @@ export function ModernContactSection({
           </div>
 
           {/* Card 2: Contact Form (Frosted Glassmorphic Card) */}
-          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
+          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
             {/* Top Glossy Corner Sheen */}
             <div className="absolute top-0 right-0 w-52 h-52 bg-white/[0.04] rounded-full blur-3xl pointer-events-none" />
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
@@ -235,7 +235,7 @@ export function ModernContactSection({
                       value={name}
                       onChange={(e) => setName(e.target.value)}
                       placeholder="Your Name*"
-                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 text-sm sm:text-base text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
+                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 text-base sm:text-sm text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
                     />
                   </div>
 
@@ -251,7 +251,7 @@ export function ModernContactSection({
                       value={email}
                       onChange={(e) => setEmail(e.target.value)}
                       placeholder="Email Address*"
-                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 pr-10 text-sm sm:text-base text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
+                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 pr-10 text-base sm:text-sm text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
                     />
                     <div className="absolute right-4 top-1/2 -translate-y-1/2 text-cinema-400 pointer-events-none">
                       <Mail className="w-4 h-4" />
@@ -269,7 +269,7 @@ export function ModernContactSection({
                       value={websiteOrVenue}
                       onChange={(e) => setWebsiteOrVenue(e.target.value)}
                       placeholder="Your Website / Cinema Circuit (Optional)"
-                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 text-sm sm:text-base text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
+                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] px-4 py-3.5 text-base sm:text-sm text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all shadow-inner"
                     />
                   </div>
 
@@ -285,7 +285,7 @@ export function ModernContactSection({
                       value={message}
                       onChange={(e) => setMessage(e.target.value)}
                       placeholder="Write your message..."
-                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] p-4 text-sm sm:text-base text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all resize-none shadow-inner"
+                      className="w-full rounded-2xl bg-white/[0.05] border border-white/10 focus:border-gold/60 focus:bg-white/[0.08] p-4 text-base sm:text-sm text-white placeholder-cinema-400 focus:outline-none focus:ring-1 focus:ring-gold/30 transition-all resize-none shadow-inner"
                     />
                   </div>
 

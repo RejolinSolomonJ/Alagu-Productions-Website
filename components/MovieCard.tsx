@@ -45,16 +45,16 @@ export function MovieCard({ movie }: MovieCardProps) {
         <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-black via-black/75 to-transparent pointer-events-none" />
 
         {/* Top Header Strip: Status badge + Year (Frosted Glass Pills) */}
-        <div className="preserve-white absolute top-0 inset-x-0 p-3.5 flex items-center justify-between z-10">
+        <div className="preserve-white absolute top-0 inset-x-0 p-2.5 sm:p-3.5 flex items-center justify-between z-10">
           <span
-            className={`inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-semibold tracking-wider uppercase border shadow-sm ${
+            className={`inline-flex items-center px-2 sm:px-2.5 py-0.5 sm:py-1 rounded-full text-[9px] sm:text-[10px] font-semibold tracking-wider uppercase border shadow-sm ${
               statusStyles[movie.status]
             }`}
           >
             {movie.status}
           </span>
 
-          <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-cinema-300 border border-white/15">
+          <span className="text-[9px] sm:text-[10px] font-mono px-2 py-0.5 rounded-full bg-black/75 backdrop-blur-md text-cinema-300 border border-white/15">
             {movie.releaseYear}
           </span>
         </div>
@@ -72,17 +72,17 @@ export function MovieCard({ movie }: MovieCardProps) {
       </Link>
 
       {/* Info Strip (Frosted Glass Bottom Bar) */}
-      <div className="p-4 flex flex-col justify-between flex-grow bg-white/[0.02] backdrop-blur-xl border-t border-white/10">
+      <div className="p-3.5 sm:p-4 flex flex-col justify-between flex-grow bg-white/[0.02] backdrop-blur-xl border-t border-white/10">
         <div>
-          <div className="flex items-center justify-between text-[11px] text-cinema-400 mb-1.5 font-mono">
+          <div className="flex items-center justify-between text-[10px] sm:text-[11px] text-cinema-400 mb-1.5 font-mono">
             <span className="flex items-center gap-1.5">
-              <Globe2 className="w-3 h-3 text-gold" />
-              <span className="truncate max-w-[130px]">{movie.territories[0] || 'Europe'}</span>
+              <Globe2 className="w-3 h-3 text-gold shrink-0" />
+              <span className="truncate max-w-[120px] sm:max-w-[130px]">{movie.territories[0] || 'Europe'}</span>
             </span>
             <span className="text-cinema-400">{movie.genres[0]}</span>
           </div>
 
-          <h3 className="font-sans text-lg font-extrabold text-white tracking-tight leading-snug group-hover:text-gold-light transition-colors">
+          <h3 className="font-sans text-base sm:text-lg font-extrabold text-white tracking-tight leading-snug group-hover:text-gold-light transition-colors">
             {movie.title}
           </h3>
 

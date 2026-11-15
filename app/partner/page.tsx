@@ -44,7 +44,7 @@ function PartnerContent() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
             {/* Left: Benefits & Direct Contacts (Frosted Glass Container) */}
             <div className="lg:col-span-5 space-y-6">
-              <div className="p-8 sm:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl space-y-6 relative overflow-hidden group hover:border-gold/30 transition-all duration-300">
+              <div className="p-5 sm:p-8 md:p-10 rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 shadow-2xl space-y-6 relative overflow-hidden group hover:border-gold/30 transition-all duration-300">
                 {/* Top Specular Sheen */}
                 <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
 

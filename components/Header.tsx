@@ -105,20 +105,20 @@ export function Header() {
       {/* Mobile Menu Drawer (Frosted Glassmorphic Overlay) */}
       {isMobileMenuOpen && (
         <div
-          className="fixed inset-0 z-40 lg:hidden bg-black/70 backdrop-blur-2xl pt-24 pb-8 px-6 flex flex-col justify-between"
+          className="fixed inset-0 z-40 lg:hidden bg-black/85 backdrop-blur-2xl pt-24 pb-8 px-6 flex flex-col justify-between overflow-y-auto overscroll-contain animate-in fade-in duration-200"
           onClick={() => setIsMobileMenuOpen(false)}
         >
-          <nav className="space-y-2 mt-4" onClick={(e) => e.stopPropagation()}>
+          <nav className="space-y-2 mt-2" onClick={(e) => e.stopPropagation()}>
             {NAV_LINKS.map((link) => {
               const isActive = pathname === link.href;
               return (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`block px-5 py-3 rounded-2xl text-base font-medium transition-all ${
+                  className={`block px-5 py-3.5 rounded-2xl text-base font-medium transition-all min-h-[48px] flex items-center ${
                     isActive
                       ? 'text-white bg-white/[0.12] border border-white/15 font-semibold shadow-inner'
-                      : 'text-cinema-300 hover:text-white hover:bg-white/[0.05]'
+                      : 'text-cinema-300 hover:text-white hover:bg-white/[0.05] active:bg-white/[0.10]'
                   }`}
                 >
                   {link.label}
@@ -127,21 +127,21 @@ export function Header() {
             })}
           </nav>
 
-          <div className="pt-6 border-t border-white/10 space-y-3" onClick={(e) => e.stopPropagation()}>
+          <div className="pt-6 mt-6 border-t border-white/10 space-y-4" onClick={(e) => e.stopPropagation()}>
             <div className="flex items-center justify-between px-2 py-1">
-              <span className="text-xs uppercase font-mono tracking-wider text-cinema-400">Appearance</span>
+              <span className="text-xs uppercase font-mono tracking-wider text-cinema-400">Appearance Mode</span>
               <ThemeToggle />
             </div>
 
             <Link
               href="/partner"
-              className="w-full py-3.5 px-6 rounded-2xl text-center text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle flex items-center justify-center gap-2"
+              className="w-full py-3.5 px-6 rounded-2xl text-center text-sm font-semibold text-cinema-950 bg-gradient-to-r from-[#DFC087] via-[#D4AF37] to-[#B89230] hover:brightness-110 shadow-gold-subtle flex items-center justify-center gap-2 active:scale-[0.98] transition-transform min-h-[48px]"
             >
               <span>Partner With Us</span>
               <ArrowUpRight className="w-4 h-4" />
             </Link>
-            <div className="text-center text-xs font-mono text-cinema-400">
-              European Indian Film Distribution Desk
+            <div className="text-center text-[11px] font-mono text-cinema-400">
+              International Indian Film Distribution Desk
             </div>
           </div>
         </div>

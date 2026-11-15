@@ -58,7 +58,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6 items-stretch">
         
         {/* Card 1: Neutral Frosted Glass Obsidian Card */}
-        <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-2xl hover:border-gold/40 transition-all duration-300 group overflow-hidden">
+        <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-7 flex flex-col justify-between min-h-[250px] sm:min-h-[320px] shadow-2xl hover:border-gold/40 transition-all duration-300 group overflow-hidden">
           {/* Top Specular Sheen & Ambient Glow */}
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
           <div className="absolute top-0 right-0 w-36 h-36 bg-gold/5 rounded-full blur-2xl pointer-events-none group-hover:bg-gold/10 transition-all" />
@@ -97,7 +97,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
         </div>
 
         {/* Card 2: THE LUXURY CHAMPAGNE GOLD HIGHLIGHT CARD (With Frosted Glass Sheen) */}
-        <div className="relative rounded-3xl bg-gradient-to-br from-[#E6CA70] via-[#D4AF37] to-[#B38D22] text-[#0A0B0E] p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-[0_15px_40px_rgba(212,175,55,0.3)] border border-[#F5DF9E]/60 transition-all duration-300 group hover:scale-[1.01] overflow-hidden">
+        <div className="relative rounded-3xl bg-gradient-to-br from-[#E6CA70] via-[#D4AF37] to-[#B38D22] text-[#0A0B0E] p-5 sm:p-7 flex flex-col justify-between min-h-[250px] sm:min-h-[320px] shadow-[0_15px_40px_rgba(212,175,55,0.3)] border border-[#F5DF9E]/60 transition-all duration-300 group hover:scale-[1.01] overflow-hidden">
           {/* Subtle glossy sheen line */}
           <div className="absolute top-0 inset-x-0 h-[2px] bg-white/40 pointer-events-none" />
           <div className="absolute -top-12 -right-12 w-48 h-48 bg-white/25 rounded-full blur-2xl pointer-events-none" />
@@ -143,7 +143,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
         </div>
 
         {/* Card 3: CINEMA ARCHITECTURE PHOTO CARD WITH FROSTED GLASS BADGE */}
-        <div className="relative rounded-3xl overflow-hidden min-h-[320px] border border-white/15 shadow-2xl group hover:border-gold/50 transition-all duration-300 flex flex-col justify-between bg-[#08090C]">
+        <div className="relative rounded-3xl overflow-hidden min-h-[250px] sm:min-h-[320px] border border-white/15 shadow-2xl group hover:border-gold/50 transition-all duration-300 flex flex-col justify-between bg-[#08090C]">
           {/* Cinema Auditorium Photo */}
           <Image
             src="/stats/multiplex-screens.jpg"
@@ -157,7 +157,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
           <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-black/25 pointer-events-none" />
 
           {/* Top Pill on Photo (Frosted Glass) */}
-          <div className="relative z-10 p-5 sm:p-6 flex items-center justify-between preserve-white">
+          <div className="relative z-10 p-4 sm:p-6 flex items-center justify-between preserve-white">
             <span className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-black/60 backdrop-blur-xl text-[10px] font-semibold text-white border border-white/20 uppercase tracking-wider font-mono shadow-md">
               <Building2 className="w-3.5 h-3.5 text-gold" />
               <span>Multiplex Circuit</span>
@@ -165,7 +165,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
           </div>
 
           {/* Overlapping Floating Frosted Glass Badge Box */}
-          <div className="preserve-white relative z-10 m-4 sm:m-5 p-4 rounded-2xl bg-[#08090C]/80 backdrop-blur-2xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
+          <div className="preserve-white relative z-10 m-3 sm:m-5 p-3.5 sm:p-4 rounded-2xl bg-[#08090C]/80 backdrop-blur-2xl border border-gold/40 shadow-2xl space-y-1 group-hover:border-gold transition-colors">
             <div className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight flex items-baseline font-sans">
               <span>{counts[2]}</span>
               <span className="text-gold text-2xl font-bold ml-0.5">+</span>
@@ -182,7 +182,7 @@ export function CredibilityStats({ className = '' }: CredibilityStatsProps) {
         </div>
 
         {/* Card 4: Technical Compliance Frosted Glass Obsidian Card */}
-        <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-7 flex flex-col justify-between min-h-[320px] shadow-2xl hover:border-gold/40 transition-all duration-300 group overflow-hidden">
+        <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-7 flex flex-col justify-between min-h-[250px] sm:min-h-[320px] shadow-2xl hover:border-gold/40 transition-all duration-300 group overflow-hidden">
           {/* Top Specular Sheen & Ambient Glow */}
           <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
           <div className="absolute top-0 right-0 w-36 h-36 bg-emerald-500/5 rounded-full blur-2xl pointer-events-none group-hover:bg-emerald-500/10 transition-all" />

@@ -47,7 +47,7 @@ export default function AboutPage() {
       {/* Main Narrative & Prescribed Copy */}
       <section className="py-14 sm:py-16">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-12 shadow-2xl overflow-hidden">
+          <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-12 shadow-2xl overflow-hidden">
             {/* Top Sheen */}
             <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
             <div className="absolute top-0 right-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -88,7 +88,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 items-stretch">
             {/* Mission */}
-            <div className="p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <Target className="w-5 h-5 text-gold" />
@@ -104,7 +104,7 @@ export default function AboutPage() {
             </div>
 
             {/* Exhibitor-First */}
-            <div className="p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <Users className="w-5 h-5 text-gold" />
@@ -120,7 +120,7 @@ export default function AboutPage() {
             </div>
 
             {/* DCI Rigor */}
-            <div className="p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
+            <div className="p-6 sm:p-8 rounded-3xl bg-white/[0.03] backdrop-blur-xl border border-white/10 space-y-4 flex flex-col justify-between hover:border-gold/30 transition-all shadow-xl group">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-2xl bg-white/[0.04] border border-white/10 flex items-center justify-center text-gold group-hover:scale-105 transition-all shadow-sm">
                   <ShieldCheck className="w-5 h-5 text-gold" />

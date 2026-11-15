@@ -61,9 +61,9 @@ export default function HomePage() {
           </div>
 
           {/* Symmetrical 2-Column Luxury Bento Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 sm:gap-8 items-stretch">
             {/* Left Card: Corporate Narrative & Mission */}
-            <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
+            <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
               {/* Subtle Top Metallic Highlight */}
               <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-gold/30 to-transparent" />
               <div className="absolute top-0 right-0 w-48 h-48 bg-gold/5 rounded-full blur-3xl pointer-events-none" />
@@ -124,7 +124,7 @@ export default function HomePage() {
             </div>
 
             {/* Right Card: Operational Capabilities & Technical Rigor */}
-            <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-10 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
+            <div className="relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-12 shadow-2xl flex flex-col justify-between overflow-hidden group hover:border-gold/30 transition-all duration-300">
               {/* Subtle Top Metallic Highlight */}
               <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent" />
               <div className="absolute bottom-0 right-0 w-48 h-48 bg-emerald-500/5 rounded-full blur-3xl pointer-events-none" />

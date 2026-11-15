@@ -155,7 +155,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
   };
 
   return (
-    <div className={`relative w-full max-w-3xl mx-auto rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-12 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300 ${className}`}>
+    <div className={`relative w-full max-w-3xl mx-auto rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-10 md:p-12 shadow-2xl overflow-hidden group hover:border-gold/30 transition-all duration-300 ${className}`}>
       {/* Top Specular Sheen */}
       <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
 
@@ -232,7 +232,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 id="country"
                 value={country}
                 onChange={handleCountryChange}
-                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all"
               >
                 {COUNTRIES.map((c) => (
                   <option key={c.code} value={c.name} className="bg-[#08090C] text-white">
@@ -253,7 +253,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="e.g. London, Frankfurt, Paris"
                 value={city}
                 onChange={(e) => setCity(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.city && <p className="text-xs text-rose-400 mt-1">{errors.city}</p>}
             </div>
@@ -270,7 +270,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="e.g. Odeon Covent Garden"
                 value={cinemaName}
                 onChange={(e) => setCinemaName(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.cinemaName && <p className="text-xs text-rose-400 mt-1">{errors.cinemaName}</p>}
             </div>
@@ -285,7 +285,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="Full name"
                 value={contactName}
                 onChange={(e) => setContactName(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.contactName && <p className="text-xs text-rose-400 mt-1">{errors.contactName}</p>}
             </div>
@@ -302,7 +302,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                 placeholder="programmer@cinema.com"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+                className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
               />
               {errors.email && <p className="text-xs text-rose-400 mt-1">{errors.email}</p>}
             </div>
@@ -317,7 +317,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                   aria-label="Dial code"
                   value={phoneCountryCode}
                   onChange={(e) => setPhoneCountryCode(e.target.value)}
-                  className="w-20 px-3 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm text-center focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all shadow-inner"
+                  className="w-20 px-3 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm text-center focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all shadow-inner"
                 />
                 <input
                   type="tel"
@@ -325,7 +325,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
                   placeholder="Number"
                   value={phoneNumber}
                   onChange={(e) => setPhoneNumber(e.target.value)}
-                  className="flex-1 px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+                  className="flex-1 px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
                 />
               </div>
               {errors.phoneNumber && <p className="text-xs text-rose-400 mt-1">{errors.phoneNumber}</p>}
@@ -342,7 +342,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
               placeholder="e.g. Jailer 2, Thug Life, or General Upcoming Slate"
               value={selectedFilm}
               onChange={(e) => setSelectedFilm(e.target.value)}
-              className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
+              className="w-full px-4 py-3 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all shadow-inner"
             />
           </div>
 
@@ -356,7 +356,7 @@ export function PartnerEnquiryForm({ prefilledFilm = '', className = '' }: Partn
               placeholder="Target screening dates, number of shows, screen capacity..."
               value={message}
               onChange={(e) => setMessage(e.target.value)}
-              className="w-full p-4 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all resize-none shadow-inner"
+              className="w-full p-4 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none placeholder:text-cinema-400 transition-all resize-none shadow-inner"
             />
             {errors.message && <p className="text-xs text-rose-400 mt-1">{errors.message}</p>}
           </div>

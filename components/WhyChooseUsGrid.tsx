@@ -78,7 +78,7 @@ export function WhyChooseUsGrid() {
           return (
             <div
               key={idx}
-              className={`relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-8 sm:p-9 hover:border-gold/40 transition-all duration-300 flex flex-col justify-between shadow-2xl group overflow-hidden ${
+              className={`relative rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-9 hover:border-gold/40 transition-all duration-300 flex flex-col justify-between shadow-2xl group overflow-hidden ${
                 isSpan ? 'md:col-span-2 lg:col-span-2' : ''
               }`}
             >

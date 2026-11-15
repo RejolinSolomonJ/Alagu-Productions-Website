@@ -26,7 +26,7 @@ const HUBS: CityHub[] = [
 
 export function EuropeanMapVisual() {
   return (
-    <div className="relative w-full rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-6 sm:p-10 overflow-hidden shadow-2xl group hover:border-gold/30 transition-all duration-300">
+    <div className="relative w-full rounded-3xl bg-white/[0.03] backdrop-blur-2xl border border-white/10 p-5 sm:p-10 overflow-hidden shadow-2xl group hover:border-gold/30 transition-all duration-300">
       {/* Top Glossy Sheen Line */}
       <div className="absolute top-0 inset-x-0 h-[1px] bg-gradient-to-r from-transparent via-white/20 to-transparent pointer-events-none" />
 
@@ -48,14 +48,14 @@ export function EuropeanMapVisual() {
           </p>
         </div>
 
-        <div className="flex items-center gap-2.5 text-xs text-cinema-300 bg-white/[0.04] backdrop-blur-md px-4 py-2 rounded-full border border-white/10 font-mono shadow-sm">
+        <div className="flex items-center gap-2.5 text-xs text-cinema-300 bg-white/[0.04] backdrop-blur-md px-4 py-2 rounded-full border border-white/10 font-mono shadow-sm self-start md:self-auto">
           <span className="w-2 h-2 rounded-full bg-gold animate-pulse" />
           <span>Synchronized Multi-City DCI Delivery</span>
         </div>
       </div>
 
       {/* Stylized Vector Map Canvas (Frosted Glass Container) */}
-      <div className="relative w-full aspect-[16/9] min-h-[340px] max-h-[500px] rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-4 overflow-hidden shadow-inner">
+      <div className="relative w-full aspect-[16/9] min-h-[300px] sm:min-h-[340px] max-h-[500px] rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10 p-4 overflow-hidden shadow-inner">
         {/* Subtle grid pattern */}
         <div className="absolute inset-0 bg-[linear-gradient(to_right,#ffffff08_1px,transparent_1px),linear-gradient(to_bottom,#ffffff08_1px,transparent_1px)] bg-[size:4rem_4rem] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_50%,#000_70%,transparent_100%)] opacity-40" />
 
@@ -92,10 +92,10 @@ export function EuropeanMapVisual() {
           >
             <div className="relative flex items-center justify-center">
               {hub.highlight && (
-                <span className="absolute w-6 h-6 rounded-full bg-gold/30 animate-ping pointer-events-none" />
+                <span className="absolute w-5 sm:w-6 h-5 sm:h-6 rounded-full bg-gold/30 animate-ping pointer-events-none" />
               )}
               <div
-                className={`w-3.5 h-3.5 rounded-full border-2 transition-transform duration-200 group-hover/node:scale-125 ${
+                className={`w-3 sm:w-3.5 h-3 sm:h-3.5 rounded-full border-2 transition-transform duration-200 group-hover/node:scale-125 ${
                   hub.highlight
                     ? 'bg-gold border-white shadow-[0_0_12px_rgba(212,175,55,0.7)]'
                     : 'bg-cinema-400 border-black/50'
@@ -103,10 +103,24 @@ export function EuropeanMapVisual() {
               />
             </div>
 
-            <div className="mt-1 px-2 py-0.5 rounded-md bg-black/75 backdrop-blur-md border border-white/10 text-[10px] font-sans text-cinema-200 whitespace-nowrap shadow-sm group-hover/node:border-gold/50 group-hover/node:text-white transition-colors">
+            <div className="mt-1 px-1.5 sm:px-2 py-0.5 rounded-md bg-black/80 backdrop-blur-md border border-white/10 text-[9px] sm:text-[10px] font-sans text-cinema-200 whitespace-nowrap shadow-sm group-hover/node:border-gold/50 group-hover/node:text-white transition-colors">
               {hub.name}
             </div>
           </div>
+        ))}
+      </div>
+
+      {/* Mobile-Friendly Territory Quick Chips */}
+      <div className="mt-4 pt-4 border-t border-white/5 flex flex-wrap gap-1.5 sm:gap-2">
+        {HUBS.map((hub) => (
+          <span
+            key={hub.country}
+            className="px-2.5 py-1 rounded-full text-[10px] sm:text-xs font-medium bg-white/[0.04] text-cinema-200 border border-white/10 flex items-center gap-1.5"
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-gold" />
+            <span className="text-white font-semibold">{hub.country}</span>
+            <span className="text-cinema-400 font-mono text-[9px] sm:text-[10px]">({hub.name})</span>
+          </span>
         ))}
       </div>
     </div>

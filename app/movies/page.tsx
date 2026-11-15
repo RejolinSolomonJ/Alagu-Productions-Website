@@ -105,7 +105,7 @@ export default function MoviesPage() {
               <select
                 value={selectedLanguage}
                 onChange={(e) => setSelectedLanguage(e.target.value)}
-                className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:outline-none cursor-pointer"
+                className="w-full sm:w-auto px-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:outline-none cursor-pointer"
                 aria-label="Filter by language"
               >
                 {allLanguages.map((lang) => (
@@ -124,7 +124,7 @@ export default function MoviesPage() {
                 placeholder="Search film, cast, director..."
                 value={searchQuery}
                 onChange={(e) => setSearchQuery(e.target.value)}
-                className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:outline-none placeholder:text-cinema-400 shadow-inner"
+                className="w-full pl-11 pr-4 py-2.5 rounded-full bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:outline-none placeholder:text-cinema-400 shadow-inner"
               />
             </div>
           </div>

@@ -87,7 +87,7 @@ export default function PortfolioPage() {
               <select
                 value={selectedCountry}
                 onChange={(e) => setSelectedCountry(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
               >
                 {countries.map((c) => (
                   <option key={c} value={c} className="bg-[#08090C] text-white">
@@ -105,7 +105,7 @@ export default function PortfolioPage() {
               <select
                 value={selectedCity}
                 onChange={(e) => setSelectedCity(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
               >
                 {cities.map((city) => (
                   <option key={city} value={city} className="bg-[#08090C] text-white">
@@ -123,7 +123,7 @@ export default function PortfolioPage() {
               <select
                 value={selectedFilm}
                 onChange={(e) => setSelectedFilm(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
               >
                 {films.map((f) => (
                   <option key={f} value={f} className="bg-[#08090C] text-white">
@@ -141,7 +141,7 @@ export default function PortfolioPage() {
               <select
                 value={selectedYear}
                 onChange={(e) => setSelectedYear(e.target.value)}
-                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-xs sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
+                className="w-full px-4 py-2.5 rounded-2xl bg-white/[0.05] border border-white/10 text-white text-base sm:text-sm focus:border-gold/60 focus:bg-white/[0.08] focus:outline-none transition-all cursor-pointer"
               >
                 {years.map((y) => (
                   <option key={y} value={y} className="bg-[#08090C] text-white">
